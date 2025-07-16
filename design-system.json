@@ -1,0 +1,248 @@
+{
+	"brand": {
+		"name": "Labo Jaune",
+		"tagline": "Simple to understand, impossible to ignore",
+		"philosophy": "Digital experiences that merge technical excellence with creative clarity"
+	},
+	"colors": {
+		"primary": {
+			"jaune": "#FFD700",
+			"noir": "#000000",
+			"blanc": "#FFFFFF"
+		},
+		"secondary": {
+			"grisFonce": "#1A1A1A",
+			"grisMoyen": "#666666",
+			"grisClair": "#F5F5F5"
+		},
+		"accent": {
+			"success": "#00C851",
+			"error": "#FF4444",
+			"info": "#33B5E5"
+		}
+	},
+	"typography": {
+		"fonts": {
+			"primary": [
+				"Neue Haas Grotesk Display",
+				"Inter",
+				"-apple-system",
+				"BlinkMacSystemFont",
+				"sans-serif"
+			],
+			"secondary": ["GT Super", "Georgia", "serif"],
+			"monospace": ["JetBrains Mono", "Courier New", "monospace"]
+		},
+		"scale": {
+			"desktop": {
+				"display": { "size": "72px", "lineHeight": "80px", "weight": "900" },
+				"h1": { "size": "56px", "lineHeight": "64px", "weight": "800" },
+				"h2": { "size": "40px", "lineHeight": "48px", "weight": "700" },
+				"h3": { "size": "32px", "lineHeight": "40px", "weight": "600" },
+				"h4": { "size": "24px", "lineHeight": "32px", "weight": "600" },
+				"bodyLarge": { "size": "20px", "lineHeight": "32px", "weight": "400" },
+				"body": { "size": "16px", "lineHeight": "24px", "weight": "400" },
+				"caption": { "size": "14px", "lineHeight": "20px", "weight": "400" },
+				"small": { "size": "12px", "lineHeight": "16px", "weight": "400" }
+			},
+			"mobile": {
+				"display": { "size": "48px", "lineHeight": "56px", "weight": "900" },
+				"h1": { "size": "40px", "lineHeight": "48px", "weight": "800" },
+				"h2": { "size": "32px", "lineHeight": "40px", "weight": "700" },
+				"h3": { "size": "24px", "lineHeight": "32px", "weight": "600" },
+				"h4": { "size": "20px", "lineHeight": "28px", "weight": "600" },
+				"bodyLarge": { "size": "18px", "lineHeight": "28px", "weight": "400" },
+				"body": { "size": "16px", "lineHeight": "24px", "weight": "400" },
+				"caption": { "size": "14px", "lineHeight": "20px", "weight": "400" },
+				"small": { "size": "12px", "lineHeight": "16px", "weight": "400" }
+			}
+		}
+	},
+	"layout": {
+		"container": {
+			"maxWidth": "1440px",
+			"contentMaxWidth": "1200px",
+			"narrowContent": "800px"
+		},
+		"grid": {
+			"columns": 12,
+			"gutter": {
+				"desktop": "32px",
+				"mobile": "16px"
+			},
+			"margins": {
+				"desktop": "80px",
+				"mobile": "24px"
+			}
+		},
+		"spacing": {
+			"xs": "4px",
+			"sm": "8px",
+			"md": "16px",
+			"lg": "24px",
+			"xl": "32px",
+			"2xl": "48px",
+			"3xl": "64px",
+			"4xl": "96px",
+			"5xl": "128px"
+		},
+		"breakpoints": {
+			"mobile": { "min": 0, "max": 767 },
+			"tablet": { "min": 768, "max": 1023 },
+			"desktop": { "min": 1024, "max": 1439 },
+			"largeDesktop": { "min": 1440 }
+		}
+	},
+	"components": {
+		"buttons": {
+			"variants": {
+				"primary": {
+					"background": "#000000",
+					"color": "#FFFFFF",
+					"hoverBackground": "#FFD700",
+					"hoverColor": "#000000"
+				},
+				"secondary": {
+					"background": "#FFFFFF",
+					"color": "#000000",
+					"border": "1px solid #000000",
+					"hoverBackground": "#FFD700",
+					"hoverBorder": "#FFD700"
+				},
+				"ghost": {
+					"background": "transparent",
+					"color": "#000000",
+					"hoverColor": "#FFD700",
+					"hoverDecoration": "underline"
+				}
+			},
+			"sizes": {
+				"large": { "height": "48px", "padding": "0 24px", "fontSize": "16px" },
+				"medium": { "height": "40px", "padding": "0 20px", "fontSize": "14px" },
+				"small": { "height": "32px", "padding": "0 16px", "fontSize": "12px" }
+			},
+			"borderRadius": "0px"
+		},
+		"cards": {
+			"background": "#FFFFFF",
+			"border": "1px solid #F5F5F5",
+			"padding": "32px",
+			"borderRadius": "0px",
+			"hover": {
+				"transform": "translateY(-2px)",
+				"boxShadow": "0 4px 20px rgba(0,0,0,0.08)"
+			}
+		},
+		"navigation": {
+			"height": "80px",
+			"background": "#FFFFFF",
+			"borderBottom": "1px solid #F5F5F5",
+			"mobile": {
+				"background": "#FFFFFF",
+				"overlay": true,
+				"fullScreen": true
+			}
+		}
+	},
+	"animation": {
+		"timing": {
+			"fast": "200ms",
+			"normal": "300ms",
+			"slow": "600ms",
+			"extraSlow": "1000ms"
+		},
+		"easing": {
+			"default": "cubic-bezier(0.4, 0, 0.2, 1)",
+			"enter": "cubic-bezier(0, 0, 0.2, 1)",
+			"exit": "cubic-bezier(0.4, 0, 1, 1)"
+		},
+		"types": {
+			"fadeIn": {
+				"from": { "opacity": 0 },
+				"to": { "opacity": 1 }
+			},
+			"slideUp": {
+				"from": { "transform": "translateY(20px)", "opacity": 0 },
+				"to": { "transform": "translateY(0)", "opacity": 1 }
+			},
+			"scale": {
+				"from": { "transform": "scale(0.95)", "opacity": 0 },
+				"to": { "transform": "scale(1)", "opacity": 1 }
+			},
+			"stagger": {
+				"delay": "50ms"
+			}
+		}
+	},
+	"copy": {
+		"tone": {
+			"principles": ["clear", "confident", "human", "inspiring"],
+			"guidelines": {
+				"headlines": "Short, punchy, action-oriented",
+				"body": "Concise paragraphs (3-4 sentences max)",
+				"cta": "Verb-driven, specific actions",
+				"caseStudies": "Results-focused, client-centric"
+			}
+		},
+		"examples": {
+			"hero": [
+				"We transform ideas into digital experiences",
+				"Digital products that drive results",
+				"Where strategy meets design"
+			],
+			"cta": ["Start your project", "View our work", "Let's talk strategy", "See the results"],
+			"services": [
+				"Strategy that moves you forward",
+				"Design that captures attention",
+				"Development that scales",
+				"Results that matter"
+			]
+		}
+	},
+	"sections": {
+		"hero": {
+			"height": "100vh",
+			"elements": ["headline", "subline", "cta"],
+			"animation": "slideUp",
+			"accentColor": "#FFD700"
+		},
+		"caseStudyGrid": {
+			"columns": {
+				"desktop": 2,
+				"mobile": 1
+			},
+			"hover": {
+				"imageScale": 1.05,
+				"showAccent": true,
+				"accentColor": "#FFD700"
+			},
+			"info": ["clientName", "projectType", "year"]
+		},
+		"services": {
+			"layout": "alternating",
+			"numberStyle": {
+				"color": "#FFD700",
+				"size": "48px",
+				"weight": "800"
+			}
+		},
+		"contact": {
+			"layout": "split",
+			"formFields": ["name", "email", "project", "message"],
+			"submitButton": {
+				"variant": "primary",
+				"size": "large",
+				"fullWidth": true
+			}
+		}
+	},
+	"accessibility": {
+		"colorContrast": "4.5:1",
+		"focusState": {
+			"outline": "2px solid #FFD700",
+			"outlineOffset": "2px"
+		},
+		"minTouchTarget": "44px",
+		"motionPreference": "prefers-reduced-motion"
+	}
+}
