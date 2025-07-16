@@ -7,64 +7,115 @@
 
 	const projects = [
 		{
-			id: 'marketplace-africa',
-			title: 'MarketPlace Africa',
-			client: 'E-commerce Corp',
-			category: 'E-commerce',
+			id: 'aidjedo',
+			title: 'ONG AIDJEDO',
+			client: 'AÏDJÈDO – PAIX DU CŒUR',
+			category: 'Site Web',
 			year: '2024',
-			description: 'Plateforme e-commerce révolutionnaire adaptée aux réalités du marché africain',
-			tags: ['UX Design', 'Développement', 'Stratégie'],
-			featured: true
+			description: 'Plateforme complète avec système de dons en ligne, espace membre et système de signalement pour cette ONG béninoise dédiée aux personnes vulnérables',
+			tags: ['UX Design', 'Développement', 'Système de dons', 'Espace membre'],
+			featured: true,
+			stats: {
+				traffic: '+150%',
+				donations: '+40%',
+				members: '+50',
+				mobile: '85%'
+			}
 		},
 		{
-			id: 'fintech-mobile',
-			title: 'FinTech Mobile Banking',
-			client: 'Digital Bank SA',
-			category: 'Application Mobile',
+			id: 'fdfa',
+			title: 'Fondation FDFA',
+			client: 'Fondation pour le Développement du Football Africain',
+			category: 'Site Institutionnel',
 			year: '2024',
-			description: "Solution bancaire mobile innovante pour l'inclusion financière",
-			tags: ['App Mobile', 'UX/UI', 'API'],
-			featured: true
+			description: 'Plateforme institutionnelle moderne positionnant la FDFA comme acteur majeur du développement du football africain avec mise en avant de 14 partenaires prestigieux',
+			tags: ['Design', 'Développement', 'Partenariats', 'Animation'],
+			featured: true,
+			stats: {
+				partners: '14',
+				visibility: '+70%',
+				inquiries: '+60%'
+			}
 		},
 		{
-			id: 'edtech-platform',
-			title: 'EdTech Learning',
-			client: 'Education Plus',
+			id: 'le-belier',
+			title: 'Agence Le Bélier',
+			client: 'Agence Le Bélier Tourisme',
+			category: 'Site Web',
+			year: '2024',
+			description: 'Site web intégrant tourisme, hôtellerie et restauration avec système de réservation en ligne et intégration des plateformes internationales',
+			tags: ['UX/UI', 'Réservation', 'Multi-services', 'WhatsApp'],
+			featured: true,
+			stats: {
+				bookings: '+110%',
+				rating: '4.8/5',
+				countries: '24',
+				engagement: '+150%'
+			}
+		},
+		{
+			id: 'afmef',
+			title: 'AFMEF',
+			client: 'Association des Femmes du MEF',
 			category: 'Plateforme Web',
 			year: '2023',
-			description: "Plateforme d'apprentissage en ligne adaptée au contexte africain",
-			tags: ['Web App', 'Design', 'Backend']
+			description: "Plateforme digitale moderne avec système d'adhésion en ligne pour l'association des femmes du Ministère de l'Économie et des Finances",
+			tags: ['Web App', 'Adhésion en ligne', 'Design institutionnel'],
+			stats: {
+				members: '+400',
+				events: '15',
+				mobile: '90%',
+				satisfaction: '85%'
+			}
 		},
 		{
-			id: 'agritech-connect',
-			title: 'AgriTech Connect',
-			client: 'Farmers United',
-			category: 'Application Mobile',
+			id: 'toguna-world',
+			title: 'Toguna World',
+			client: 'Pierre-Christophe Gam',
+			category: 'Site Artistique',
 			year: '2023',
-			description: 'Application connectant agriculteurs et acheteurs',
-			tags: ['Mobile', 'API', 'Marketing']
+			description: 'Expérience web immersive pour un projet artistique explorant les rêves et la Renaissance Africaine avec installation multimédia',
+			tags: ['Design immersif', 'Multimédia', 'Art digital'],
+			featured: true,
+			awards: [
+				'Prix Unity for Humanity 2022',
+				'Unity Kick-off Award 2023',
+				'Fellowship MIT Open Documentary Lab',
+				'Exposition Ars Electronica 2024'
+			]
 		},
 		{
-			id: 'healthtech-portal',
-			title: 'HealthTech Portal',
-			client: 'MediCare Africa',
+			id: 'iwaria',
+			title: 'Iwaria',
+			client: 'Iwaria Platform',
 			category: 'Plateforme Web',
 			year: '2023',
-			description: 'Portail de santé numérique pour la télémédecine',
-			tags: ['Web App', 'UX Design', 'Intégration']
+			description: "Conception de l'interface utilisateur pour une banque d'images africaines gratuites de haute qualité",
+			tags: ['UI Design', 'UX', 'Galerie', 'Responsive'],
+			stats: {
+				responsive: '100%',
+				navigation: '+40%',
+				satisfaction: '95%'
+			}
 		},
 		{
-			id: 'logistics-tracker',
-			title: 'Logistics Tracker',
-			client: 'Transport Solutions',
+			id: 'coris-bank',
+			title: 'Coris Bank Mobile',
+			client: 'Coris Bank',
 			category: 'Application Mobile',
 			year: '2022',
-			description: 'Solution de suivi logistique en temps réel',
-			tags: ['Mobile', 'Backend', 'IoT']
+			description: 'Conception UX/UI complète et prototype interactif pour une application de mobile banking aux standards internationaux',
+			tags: ['Mobile', 'UX/UI', 'Prototype', 'Banking'],
+			deliverables: [
+				'Prototype interactif complet',
+				'Interface moderne et intuitive',
+				'Standards bancaires internationaux',
+				'Design sécurisé'
+			]
 		}
 	];
 
-	const categories = ['Tous', 'E-commerce', 'Application Mobile', 'Plateforme Web'];
+	const categories = ['Tous', 'Site Web', 'Site Institutionnel', 'Plateforme Web', 'Application Mobile', 'Site Artistique'];
 	let selectedCategory = 'Tous';
 
 	$: filteredProjects =
@@ -119,22 +170,23 @@
 			</div>
 			<div in:fly={{ y: 20, duration: 600, delay: 200 }}>
 				<Typography variant="body-large" className="text-noir/80">
-					Découvrez comment nous avons aidé nos clients à transformer leurs idées en solutions
-					digitales innovantes qui font la différence sur le marché africain.
+					Ce portfolio présente une sélection de projets qui illustrent notre capacité à transformer 
+					les visions de nos clients en réalités digitales performantes. Chaque projet témoigne de 
+					notre approche unique alliant créativité, expertise technique et compréhension profonde des enjeux locaux.
 				</Typography>
 			</div>
 		</div>
 	</Container>
 </section>
 
-<!-- Filter Section -->
-<section class="sticky top-16 z-20 bg-gris-clair py-8">
+<!-- Filter Section - Hidden on mobile -->
+<section class="sticky top-16 z-20 bg-gris-clair py-8 hidden lg:block">
 	<Container>
 		<div class="flex flex-wrap gap-4">
 			{#each categories as category}
 				<button
 					on:click={() => (selectedCategory = category)}
-					class="border-2 border-noir px-6 py-2 transition-all duration-300
+					class="border-2 border-noir px-6 py-2 transition-all duration-300 rounded-full
 						{selectedCategory === category ? 'bg-noir text-blanc' : 'bg-blanc text-noir hover:bg-jaune'}"
 				>
 					<Typography variant="body" className="font-medium">
@@ -152,7 +204,7 @@
 		<Grid cols={2} gap="lg">
 			{#each filteredProjects as project, i}
 				<div
-					class="group overflow-hidden border-2 border-noir bg-blanc transition-all duration-300 hover:border-jaune"
+					class="group overflow-hidden border-2 border-noir bg-blanc transition-all duration-300 hover:border-jaune rounded-2xl"
 					in:fadeScale={{ duration: 600, delay: 100 + i * 50 }}
 				>
 					<!-- Project Image Placeholder -->
@@ -195,7 +247,7 @@
 						<!-- Tags -->
 						<div class="mb-6 flex flex-wrap gap-2">
 							{#each project.tags as tag}
-								<span class="bg-gris-clair px-3 py-1 text-sm text-noir">
+								<span class="bg-gris-clair px-3 py-1 text-sm text-noir rounded-full">
 									{tag}
 								</span>
 							{/each}

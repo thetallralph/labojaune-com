@@ -15,9 +15,9 @@
 	aria-label="Labo Jaune - Retour à l'accueil"
 >
 	<span class="{sizes[size]} font-display uppercase tracking-wider" aria-hidden="true">
-		<span class="text-noir transition-colors duration-300 group-hover:text-blanc">Labo</span>
+		<span class="text-noir transition-colors duration-300 group-hover:text-jaune">Labo</span>
 		<span
-			class="ml-1 bg-noir px-1 text-jaune text-noir transition-all duration-300 group-hover:bg-blanc group-hover:text-noir"
+			class="ml-1 text-jaune transition-colors duration-300 group-hover:text-noir"
 			>Jaune</span
 		>
 	</span>

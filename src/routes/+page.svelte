@@ -80,33 +80,33 @@
 			cta: 'Voir tous les projets',
 			projects: [
 				{
-					id: 'project-1',
-					title: 'E-commerce Africain',
-					client: 'MarketPlace SA',
-					category: 'E-commerce',
+					id: 'aidjedo',
+					title: 'ONG AIDJEDO',
+					client: 'AÏDJÈDO – PAIX DU CŒUR',
+					category: 'Site Web',
 					year: '2024',
 					description:
-						'Plateforme e-commerce révolutionnaire adaptée aux besoins du marché africain'
+						'Plateforme complète avec système de dons en ligne et espace membre pour cette ONG béninoise'
 				},
 				{
-					id: 'project-2',
-					title: 'App Mobile Banking',
-					client: 'FinTech Corp',
-					category: 'Application Mobile',
+					id: 'fdfa',
+					title: 'Fondation FDFA',
+					client: 'FDFA',
+					category: 'Site Institutionnel',
 					year: '2024',
-					description: "Solution bancaire mobile intuitive pour l'inclusion financière en Afrique"
+					description: "Plateforme moderne positionnant la FDFA comme acteur majeur du football africain"
 				}
 			]
 		},
 		testimonials: {
-			title: 'Ce que disent nos clients',
+			title: 'La confiance de nos clients',
 			list: [
 				{
 					quote:
-						'Labo Jaune a transformé notre vision en une réalité digitale qui dépasse nos attentes.',
-					author: 'Jean-Paul Mbeki',
-					position: 'CEO',
-					company: 'TechCorp Africa'
+						'Labo Jaune a su comprendre nos besoins spécifiques et créer une solution qui allie esthétique moderne et fonctionnalité. Leur approche professionnelle et créative a transformé notre présence en ligne.',
+					author: 'Marie Kouadio',
+					position: 'Directrice',
+					company: 'Fondation FDFA'
 				}
 			]
 		},
@@ -176,8 +176,8 @@
 			<div in:fly={{ y: 20, duration: 600, delay: 100 }}>
 				<Typography variant="display" className="mb-6 font-display uppercase">
 					{@html content.hero.headline.replace(
-						'Afrique',
-						'<span class="bg-noir text-jaune px-2">Afrique</span>'
+						'transforment',
+						'<span class="bg-noir text-jaune px-2">transforment</span>'
 					)}
 				</Typography>
 			</div>
@@ -218,7 +218,7 @@
 		<Grid cols={2} gap="lg">
 			{#each content.services.list as service, i}
 				<div
-					class="border-2 border-noir bg-gris-clair p-8 text-noir transition-all duration-300 hover:bg-jaune"
+					class="border-2 border-noir bg-gris-clair p-8 text-noir transition-all duration-300 hover:bg-jaune rounded-2xl"
 					in:fly={{ y: 20, duration: 600, delay: 100 + i * 100 }}
 				>
 					<Typography variant="h3" className="mb-4 font-bold">
@@ -256,7 +256,7 @@
 			{#each content.process.steps as step, i}
 				<div class="relative" in:fly={{ y: 20, duration: 600, delay: 100 + i * 100 }}>
 					<div
-						class="h-full bg-noir p-8 text-blanc transition-all duration-300 hover:bg-jaune hover:text-noir"
+						class="h-full bg-noir p-8 text-blanc transition-all duration-300 hover:bg-jaune hover:text-noir rounded-2xl"
 					>
 						<Typography variant="h1" className="mb-4 font-display">
 							{step.number}
@@ -292,7 +292,7 @@
 		<div class="mb-12 grid grid-cols-1 gap-8 md:grid-cols-2">
 			{#each content.portfolio.projects.slice(0, 2) as project, i}
 				<div
-					class="group relative overflow-hidden border-2 border-noir bg-blanc transition-all duration-300 hover:border-jaune"
+					class="group relative overflow-hidden border-2 border-noir bg-blanc transition-all duration-300 hover:border-jaune rounded-2xl"
 					in:fly={{ y: 20, duration: 600, delay: 100 + i * 100 }}
 				>
 					<div class="relative aspect-video overflow-hidden bg-gris-clair">
@@ -375,7 +375,7 @@
 		<div class="mx-auto max-w-4xl">
 			{#each content.testimonials.list as testimonial, i}
 				<div
-					class="border-2 border-noir bg-jaune p-12"
+					class="border-2 border-noir bg-jaune p-12 rounded-2xl"
 					in:fly={{ y: 20, duration: 600, delay: 100 + i * 100 }}
 				>
 					<Typography variant="h3" className="mb-8 text-noir font-serif italic leading-relaxed">
@@ -405,7 +405,7 @@
 <!-- CTA Section -->
 <section class="py-24">
 	<Container>
-		<div class="bg-noir p-12 text-center text-blanc lg:p-16">
+		<div class="bg-noir p-12 text-center text-blanc lg:p-16 rounded-2xl">
 			<Typography variant="h2" className="mb-4 font-display uppercase">
 				{content.cta.banner.title}
 			</Typography>
@@ -414,9 +414,8 @@
 			</Typography>
 			<Button
 				href="/contact"
-				variant="primary"
+				variant="primary-inverse"
 				size="large"
-				className="bg-jaune text-noir hover:bg-blanc border-jaune"
 			>
 				{content.cta.banner.button}
 			</Button>

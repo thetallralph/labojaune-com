@@ -11,51 +11,81 @@
 			intro: 'Des solutions complètes pour votre transformation digitale',
 			list: [
 				{
-					id: 'strategy',
-					title: 'Stratégie Digitale',
+					id: 'website',
+					title: 'Sites Web & Applications',
 					description:
-						'Nous élaborons des stratégies digitales sur mesure qui alignent vos objectifs business avec les opportunités du marché africain.',
+						'Création de sites web modernes et applications web sur mesure qui captivent votre audience et transforment votre présence digitale.',
+					features: [
+						'Sites vitrines et institutionnels',
+						'Applications web progressives (PWA)',
+						'Plateformes e-commerce',
+						'Portails et intranets',
+						'Solutions SaaS personnalisées'
+					]
+				},
+				{
+					id: 'branding',
+					title: '🎨 Identité Visuelle & Branding',
+					description:
+						'Création de logos, chartes graphiques et supports de communication pour construire une image de marque forte et cohérente.',
+					features: [
+						'Conception de logos',
+						'Chartes graphiques complètes',
+						'Design de packaging',
+						'Supports print et digitaux',
+						'Guidelines de marque'
+					]
+				},
+				{
+					id: 'strategy',
+					title: '📊 Stratégie Digitale',
+					description:
+						'Audit, conseil et accompagnement pour optimiser votre présence en ligne et atteindre vos objectifs business.',
 					features: [
 						'Audit digital complet',
-						'Analyse de marché',
+						'Plan de digitalisation',
 						'Roadmap stratégique',
-						'KPIs et métriques'
+						'Analyse concurrentielle',
+						'KPIs et métriques de succès'
 					]
 				},
 				{
-					id: 'design',
-					title: 'Design & Expérience Utilisateur',
+					id: 'analytics',
+					title: '📈 Analytics & Optimisation',
 					description:
-						'Nous créons des interfaces intuitives et esthétiques qui captivent vos utilisateurs tout en respectant les spécificités culturelles.',
+						'Mise en place d\'outils de mesure, analyse des données et recommandations pour améliorer vos performances.',
 					features: [
-						'UX/UI Design',
-						'Design System',
-						'Prototypage interactif',
-						'Tests utilisateurs'
+						'Tableaux de bord personnalisés',
+						'Tracking et analyse de données',
+						'Tests A/B et optimisation',
+						'Rapports de performance',
+						'Recommandations stratégiques'
 					]
 				},
 				{
-					id: 'development',
-					title: 'Développement Web & Mobile',
+					id: 'mobile',
+					title: '📱 Applications Mobiles',
 					description:
-						'Nous développons des solutions techniques robustes et performantes adaptées aux réalités technologiques africaines.',
+						'Développement d\'applications natives et hybrides pour iOS et Android, avec une expertise particulière dans les solutions de paiement mobile.',
 					features: [
-						'Applications web progressives',
-						'Applications mobiles natives',
-						'E-commerce',
-						'Solutions API'
+						'Applications natives iOS/Android',
+						'Applications hybrides multi-plateformes',
+						'Intégration de paiements mobiles',
+						'Solutions de géolocalisation',
+						'Applications de livraison et logistique'
 					]
 				},
 				{
-					id: 'marketing',
-					title: 'Marketing Digital',
+					id: 'maintenance',
+					title: '🔄 Maintenance & Support',
 					description:
-						'Nous déployons des campagnes marketing créatives qui touchent efficacement votre audience cible.',
+						'Services de maintenance préventive, mises à jour de sécurité et support technique réactif.',
 					features: [
-						'Stratégie de contenu',
-						'Social media management',
-						'SEO & SEM',
-						'Analytics et reporting'
+						'Maintenance préventive',
+						'Mises à jour de sécurité',
+						'Support technique 24/7',
+						'Monitoring et alertes',
+						'Optimisation des performances'
 					]
 				}
 			]
@@ -189,12 +219,12 @@
 					</div>
 
 					<div
-						class="relative aspect-video overflow-hidden bg-noir"
+						class="relative aspect-video overflow-hidden bg-noir rounded-2xl"
 						class:lg:col-start-1={i % 2 === 1}
 						in:fadeScale={{ duration: 600, delay: 200 }}
 					>
 						<div class="absolute inset-0 flex items-center justify-center">
-							<div class="h-24 w-24 bg-jaune"></div>
+							<div class="h-24 w-24 bg-jaune rounded-2xl"></div>
 						</div>
 					</div>
 				</div>
@@ -233,7 +263,7 @@
 <!-- CTA Section -->
 <section class="py-24">
 	<Container>
-		<div class="border-2 border-noir bg-jaune p-12 text-center text-noir lg:p-16">
+		<div class="border-2 border-noir bg-jaune p-12 text-center text-noir lg:p-16 rounded-2xl">
 			<Typography variant="h2" className="mb-4 font-display uppercase">
 				Prêt à démarrer ?
 			</Typography>

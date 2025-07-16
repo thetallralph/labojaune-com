@@ -1,7 +1,7 @@
 <script>
 	import { cn } from '$lib/utils/helpers';
 
-	/** @type {'primary' | 'secondary' | 'ghost'} */
+	/** @type {'primary' | 'secondary' | 'ghost' | 'primary-inverse'} */
 	export let variant = 'primary';
 	/** @type {'small' | 'medium' | 'large'} */
 	export let size = 'medium';
@@ -23,12 +23,13 @@
 	export let type = 'button';
 
 	const baseClasses =
-		'inline-flex items-center justify-center font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-jaune focus:ring-offset-2 rounded';
+		'inline-flex items-center justify-center font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-jaune focus:ring-offset-2 rounded-full';
 
 	const variants = {
 		primary: 'bg-noir text-blanc hover:bg-blanc hover:text-noir border-2 border-noir',
 		secondary: 'bg-transparent text-noir border-2 border-noir hover:bg-noir hover:text-blanc',
-		ghost: 'bg-transparent text-noir hover:text-blanc underline underline-offset-4'
+		ghost: 'bg-transparent text-noir hover:text-blanc underline underline-offset-4',
+		'primary-inverse': 'bg-jaune text-noir hover:bg-blanc hover:text-noir border-2 border-jaune'
 	};
 
 	const sizes = {
