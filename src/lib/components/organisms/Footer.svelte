@@ -7,7 +7,7 @@
 
 	const content = {
 		footer: {
-			tagline: "Créateurs d'expériences digitales uniques pour l'Afrique",
+			tagline: "Agence tech et design pour la croissance des entreprises africaines",
 			links: [
 				{
 					title: 'Services',
@@ -28,13 +28,13 @@
 					]
 				}
 			],
-			copyright: '© Labo Jaune. Tous droits réservés.'
+			copyright: '© Le Labo Jaune. Tous droits réservés.'
 		},
 		contact: {
 			info: {
 				email: 'hello@labojaune.com',
-				phone: '+221 33 123 45 67',
-				address: 'Dakar, Sénégal',
+				phone: '+229 01 67 23 24 43',
+				address: 'Cotonou, Bénin',
 				social: {
 					linkedin: 'https://linkedin.com/company/labojaune',
 					twitter: 'https://twitter.com/labojaune',
@@ -147,7 +147,7 @@
 		<!-- Bottom Bar -->
 		<div class="mt-12 border-t-2 border-noir pt-8">
 			<Typography variant="small" className="text-noir text-center font-medium">
-				© {year} Labo Jaune. {content.footer.copyright.split('©')[1]}
+				© {year} Le Labo Jaune. {content.footer.copyright.split('©')[1]}
 			</Typography>
 		</div>
 	</Container>

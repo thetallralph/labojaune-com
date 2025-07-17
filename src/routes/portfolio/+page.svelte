@@ -15,6 +15,8 @@
 			description: 'Plateforme complète avec système de dons en ligne, espace membre et système de signalement pour cette ONG béninoise dédiée aux personnes vulnérables',
 			tags: ['UX Design', 'Développement', 'Système de dons', 'Espace membre'],
 			featured: true,
+			heroColor: '#E85D75',
+			image: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1200&h=675&fit=crop',
 			stats: {
 				traffic: '+150%',
 				donations: '+40%',
@@ -31,6 +33,8 @@
 			description: 'Plateforme institutionnelle moderne positionnant la FDFA comme acteur majeur du développement du football africain avec mise en avant de 14 partenaires prestigieux',
 			tags: ['Design', 'Développement', 'Partenariats', 'Animation'],
 			featured: true,
+			heroColor: '#00A86B',
+			image: 'https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=1200&h=675&fit=crop',
 			stats: {
 				partners: '14',
 				visibility: '+70%',
@@ -46,6 +50,8 @@
 			description: 'Site web intégrant tourisme, hôtellerie et restauration avec système de réservation en ligne et intégration des plateformes internationales',
 			tags: ['UX/UI', 'Réservation', 'Multi-services', 'WhatsApp'],
 			featured: true,
+			heroColor: '#FF6B35',
+			image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&h=675&fit=crop',
 			stats: {
 				bookings: '+110%',
 				rating: '4.8/5',
@@ -61,6 +67,8 @@
 			year: '2023',
 			description: "Plateforme digitale moderne avec système d'adhésion en ligne pour l'association des femmes du Ministère de l'Économie et des Finances",
 			tags: ['Web App', 'Adhésion en ligne', 'Design institutionnel'],
+			heroColor: '#7B68EE',
+			image: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=1200&h=675&fit=crop',
 			stats: {
 				members: '+400',
 				events: '15',
@@ -77,6 +85,8 @@
 			description: 'Expérience web immersive pour un projet artistique explorant les rêves et la Renaissance Africaine avec installation multimédia',
 			tags: ['Design immersif', 'Multimédia', 'Art digital'],
 			featured: true,
+			heroColor: '#9333EA',
+			image: 'https://images.unsplash.com/photo-1559028012-481c04fa702d?w=1200&h=675&fit=crop',
 			awards: [
 				'Prix Unity for Humanity 2022',
 				'Unity Kick-off Award 2023',
@@ -92,6 +102,8 @@
 			year: '2023',
 			description: "Conception de l'interface utilisateur pour une banque d'images africaines gratuites de haute qualité",
 			tags: ['UI Design', 'UX', 'Galerie', 'Responsive'],
+			heroColor: '#06B6D4',
+			image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=675&fit=crop',
 			stats: {
 				responsive: '100%',
 				navigation: '+40%',
@@ -106,6 +118,8 @@
 			year: '2022',
 			description: 'Conception UX/UI complète et prototype interactif pour une application de mobile banking aux standards internationaux',
 			tags: ['Mobile', 'UX/UI', 'Prototype', 'Banking'],
+			heroColor: '#0EA5E9',
+			image: 'https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=1200&h=675&fit=crop',
 			deliverables: [
 				'Prototype interactif complet',
 				'Interface moderne et intuitive',
@@ -164,8 +178,11 @@
 	<Container>
 		<div class="max-w-4xl">
 			<div in:fly={{ y: 20, duration: 600, delay: 100 }}>
-				<Typography variant="h1" className="mb-6 font-display uppercase">
+				<Typography variant="overline" className="mb-2 text-jaune font-mono">
 					Notre Portfolio
+				</Typography>
+				<Typography variant="h1" className="mb-6 font-display">
+					Des réalisations qui parlent d'elles-mêmes
 				</Typography>
 			</div>
 			<div in:fly={{ y: 20, duration: 600, delay: 200 }}>
@@ -207,16 +224,28 @@
 					class="group overflow-hidden border-2 border-noir bg-blanc transition-all duration-300 hover:border-jaune rounded-2xl"
 					in:fadeScale={{ duration: 600, delay: 100 + i * 50 }}
 				>
-					<!-- Project Image Placeholder -->
+					<!-- Project Image -->
 					<div class="relative aspect-video overflow-hidden bg-gris-clair">
-						<div
-							class="absolute inset-0 bg-jaune/0 transition-colors duration-300 group-hover:bg-jaune/10"
-						></div>
-						<div class="absolute inset-0 flex items-center justify-center">
-							<Typography variant="h2" className="text-noir/10 font-display">
-								{project.title.substring(0, 2)}
-							</Typography>
-						</div>
+						{#if project.image}
+							<img 
+								src={project.image} 
+								alt="{project.title} - {project.client}"
+								class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+								loading="lazy"
+							/>
+							<div
+								class="absolute inset-0 bg-noir/0 transition-colors duration-300 group-hover:bg-noir/20"
+							></div>
+						{:else}
+							<div
+								class="absolute inset-0 bg-jaune/0 transition-colors duration-300 group-hover:bg-jaune/10"
+							></div>
+							<div class="absolute inset-0 flex items-center justify-center">
+								<Typography variant="h2" className="text-noir/10 font-display">
+									{project.title.substring(0, 2)}
+								</Typography>
+							</div>
+						{/if}
 						{#if project.featured}
 							<div class="absolute left-4 top-4 bg-jaune px-3 py-1">
 								<Typography variant="small" className="font-mono text-noir">FEATURED</Typography>

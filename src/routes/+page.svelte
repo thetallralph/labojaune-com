@@ -4,12 +4,16 @@
 	import Button from '$lib/components/atoms/Button.svelte';
 	import Grid from '$lib/components/atoms/Grid.svelte';
 	import { fly } from '$lib/utils/transitions';
+	import { projectsData } from '$lib/data/projects';
+
+	// Get all projects as an array
+	const allProjects = Object.values(projectsData);
 
 	const content = {
 		hero: {
-			headline: "Créateurs d'expériences digitales uniques pour l'Afrique",
+			headline: "Accompagner votre croissance avec des solutions tech adaptées",
 			subheadline:
-				'Nous transformons vos idées en solutions numériques innovantes qui résonnent avec le marché africain',
+				'Agence tech et design basée à Cotonou, nous créons des solutions sur-mesure pour les entreprises africaines',
 			cta: {
 				primary: 'Démarrer un projet',
 				secondary: 'Découvrir notre travail'
@@ -17,36 +21,38 @@
 		},
 		services: {
 			title: 'Nos Services',
+			headline: 'Nous créons des expériences digitales qui transforment votre business',
 			intro: 'Des solutions complètes pour votre transformation digitale',
 			list: [
 				{
 					id: 'strategy',
 					title: 'Stratégie Digitale',
 					description:
-						'Nous élaborons des stratégies digitales sur mesure qui alignent vos objectifs business avec les opportunités du marché africain.'
+						'Nous vous accompagnons dans le déploiement de solutions technologiques adaptées à vos besoins et à votre contexte.'
 				},
 				{
 					id: 'design',
 					title: 'Design & Expérience Utilisateur',
 					description:
-						'Nous créons des interfaces intuitives et esthétiques qui captivent vos utilisateurs tout en respectant les spécificités culturelles.'
+						'Nous créons des identités visuelles et des interfaces qui reflètent votre marque et parlent à votre audience.'
 				},
 				{
 					id: 'development',
 					title: 'Développement Web & Mobile',
 					description:
-						'Nous développons des solutions techniques robustes et performantes adaptées aux réalités technologiques africaines.'
+						'Nous développons des sites internet et applications web/mobiles sur-mesure, simples, efficaces et durables.'
 				},
 				{
 					id: 'marketing',
 					title: 'Marketing Digital',
 					description:
-						'Nous déployons des campagnes marketing créatives qui touchent efficacement votre audience cible.'
+						'Nous vous conseillons et accompagnons dans votre stratégie digitale pour maximiser votre impact en ligne.'
 				}
 			]
 		},
 		process: {
 			title: 'Notre Processus',
+			headline: 'Quatre étapes pour transformer vos idées en réalité',
 			intro: 'Une approche méthodique pour des résultats exceptionnels',
 			steps: [
 				{
@@ -76,6 +82,7 @@
 		},
 		portfolio: {
 			title: 'Notre Travail',
+			headline: 'Des projets qui ont transformé la présence digitale de nos clients',
 			intro: 'Des projets qui font la différence',
 			cta: 'Voir tous les projets',
 			projects: [
@@ -119,24 +126,17 @@
 			}
 		}
 	};
-
-	const stats = [
-		{ number: '50+', label: 'Projets livrés' },
-		{ number: '30+', label: 'Clients satisfaits' },
-		{ number: '5', label: "Années d'expertise" },
-		{ number: '98%', label: 'Taux de satisfaction' }
-	];
 </script>
 
 <svelte:head>
-	<title>Labo Jaune - Créateurs d'expériences digitales uniques pour l'Afrique</title>
+	<title>Le Labo Jaune - Agence tech et design à Cotonou, Bénin</title>
 	<meta
 		name="description"
-		content="Agence digitale créative spécialisée dans la transformation numérique en Afrique. Nous créons des solutions web et mobile innovantes qui résonnent avec le marché africain."
+		content="Agence tech et design basée à Cotonou. Nous accompagnons les entreprises africaines dans leur croissance avec des solutions technologiques sur-mesure : sites web, applications, branding."
 	/>
 	<meta
 		name="keywords"
-		content="agence digitale, web design, développement web, marketing digital, Afrique, transformation numérique, solutions digitales"
+		content="agence tech, agence design, développement web, développement mobile, branding, Cotonou, Bénin, Afrique, solutions technologiques"
 	/>
 
 	<!-- Open Graph / Facebook -->
@@ -144,11 +144,11 @@
 	<meta property="og:url" content="https://labojaune.com/" />
 	<meta
 		property="og:title"
-		content="Labo Jaune - Créateurs d'expériences digitales uniques pour l'Afrique"
+		content="Le Labo Jaune - Agence tech et design à Cotonou, Bénin"
 	/>
 	<meta
 		property="og:description"
-		content="Agence digitale créative spécialisée dans la transformation numérique en Afrique. Nous créons des solutions web et mobile innovantes."
+		content="Agence tech et design basée à Cotonou. Nous accompagnons les entreprises africaines avec des solutions technologiques sur-mesure."
 	/>
 	<meta property="og:image" content="https://labojaune.com/og-image.jpg" />
 
@@ -157,11 +157,11 @@
 	<meta property="twitter:url" content="https://labojaune.com/" />
 	<meta
 		property="twitter:title"
-		content="Labo Jaune - Créateurs d'expériences digitales uniques pour l'Afrique"
+		content="Le Labo Jaune - Agence tech et design à Cotonou, Bénin"
 	/>
 	<meta
 		property="twitter:description"
-		content="Agence digitale créative spécialisée dans la transformation numérique en Afrique."
+		content="Agence tech et design basée à Cotonou. Solutions technologiques sur-mesure pour entreprises africaines."
 	/>
 	<meta property="twitter:image" content="https://labojaune.com/og-image.jpg" />
 
@@ -207,8 +207,11 @@
 <section class="bg-blanc py-24">
 	<Container>
 		<div class="mb-16 text-center">
-			<Typography variant="h2" className="mb-4 font-display uppercase text-noir">
+			<Typography variant="overline" className="mb-2 text-jaune font-mono">
 				{content.services.title}
+			</Typography>
+			<Typography variant="h2" className="mb-4 font-display text-noir">
+				{content.services.headline}
 			</Typography>
 			<Typography variant="body-large" className="text-noir/80">
 				{content.services.intro}
@@ -244,8 +247,11 @@
 <section class="bg-blanc py-24">
 	<Container>
 		<div class="mb-16 text-center">
-			<Typography variant="h2" className="mb-4 font-display uppercase text-noir">
+			<Typography variant="overline" className="mb-2 text-jaune font-mono">
 				{content.process.title}
+			</Typography>
+			<Typography variant="h2" className="mb-4 font-display text-noir">
+				{content.process.headline}
 			</Typography>
 			<Typography variant="body-large" className="text-noir/80 max-w-2xl mx-auto">
 				{content.process.intro}
@@ -278,87 +284,77 @@
 </section>
 
 <!-- Featured Projects -->
-<section class="bg-gris-clair py-24">
+<section class="bg-gris-clair py-24 overflow-hidden">
 	<Container>
 		<div class="mb-16 text-center">
-			<Typography variant="h2" className="mb-4 font-display uppercase text-noir">
+			<Typography variant="overline" className="mb-2 text-jaune font-mono">
 				{content.portfolio.title}
+			</Typography>
+			<Typography variant="h2" className="mb-4 font-display text-noir">
+				{content.portfolio.headline}
 			</Typography>
 			<Typography variant="body-large" className="text-noir/80 max-w-2xl mx-auto">
 				{content.portfolio.intro}
 			</Typography>
 		</div>
+	</Container>
 
-		<div class="mb-12 grid grid-cols-1 gap-8 md:grid-cols-2">
-			{#each content.portfolio.projects.slice(0, 2) as project, i}
-				<div
-					class="group relative overflow-hidden border-2 border-noir bg-blanc transition-all duration-300 hover:border-jaune rounded-2xl"
-					in:fly={{ y: 20, duration: 600, delay: 100 + i * 100 }}
+	<!-- Horizontal scrollable projects -->
+	<div class="relative">
+		<div class="flex gap-6 overflow-x-auto scrollbar-hide px-6 lg:px-12 pb-4">
+			{#each allProjects as project, i}
+				<div 
+					class="flex-none w-[90vw] sm:w-[450px] lg:w-[500px]"
+					in:fly={{ x: 50, duration: 600, delay: 100 + i * 50 }}
 				>
-					<div class="relative aspect-video overflow-hidden bg-gris-clair">
-						<div
-							class="absolute inset-0 bg-jaune/0 transition-colors duration-300 group-hover:bg-jaune/10"
-						></div>
-						<div class="absolute inset-0 flex items-center justify-center">
-							<Typography variant="h3" className="text-noir/20 font-display">
-								{project.title}
-							</Typography>
-						</div>
-					</div>
-					<div class="p-8">
-						<div class="mb-4 flex items-start justify-between">
-							<div>
-								<Typography variant="h3" className="mb-2 font-bold text-noir">
+					<a
+						href="/portfolio/{project.id}"
+						class="group relative block overflow-hidden border-2 border-noir bg-blanc transition-all duration-300 hover:border-jaune rounded-2xl cursor-pointer no-underline h-full"
+					>
+						<div class="relative aspect-video overflow-hidden bg-gris-clair">
+							<div
+								class="absolute inset-0 bg-jaune/0 transition-colors duration-300 group-hover:bg-jaune/10"
+							></div>
+							<div class="absolute inset-0 flex items-center justify-center">
+								<Typography variant="h3" className="text-noir/20 font-display">
 									{project.title}
 								</Typography>
+							</div>
+						</div>
+						<div class="p-6 lg:p-8">
+							<div class="mb-4 flex items-start justify-between">
+								<div>
+									<Typography variant="h3" className="mb-2 font-bold text-noir">
+										{project.title}
+									</Typography>
+									<Typography variant="body-small" className="text-noir/60">
+										{project.client} • {project.category}
+									</Typography>
+								</div>
 								<Typography variant="body-small" className="text-noir/60">
-									{project.client} • {project.category}
+									{project.year}
 								</Typography>
 							</div>
-							<Typography variant="body-small" className="text-noir/60">
-								{project.year}
+							<Typography variant="body" className="mb-6 text-noir/80 line-clamp-2">
+								{project.description}
 							</Typography>
+							<span
+								class="inline-flex items-center text-noir group-hover:translate-x-2 transition-transform font-medium"
+							>
+								Voir le projet →
+							</span>
 						</div>
-						<Typography variant="body" className="mb-6 text-noir/80">
-							{project.description}
-						</Typography>
-						<Button
-							href="/portfolio/{project.id}"
-							variant="ghost"
-							className="text-noir hover:text-noir group-hover:translate-x-2 transition-transform"
-						>
-							Voir le projet →
-						</Button>
-					</div>
+					</a>
 				</div>
 			{/each}
 		</div>
+	</div>
 
-		<div class="text-center">
+	<Container>
+		<div class="text-center mt-12">
 			<Button href="/portfolio" size="large" variant="secondary">
 				{content.portfolio.cta}
 			</Button>
-		</div>
-	</Container>
-</section>
-
-<!-- Stats Section -->
-<section class="bg-noir py-24 text-blanc">
-	<Container>
-		<div class="grid grid-cols-2 gap-8 text-center md:grid-cols-4">
-			{#each stats as stat, i}
-				<div
-					class="border-r border-blanc/20 last:border-r-0"
-					in:fly={{ y: 20, duration: 600, delay: 100 + i * 100 }}
-				>
-					<Typography variant="h1" className="mb-2 font-display text-jaune">
-						{stat.number}
-					</Typography>
-					<Typography variant="body" className="text-blanc/80">
-						{stat.label}
-					</Typography>
-				</div>
-			{/each}
 		</div>
 	</Container>
 </section>
@@ -422,3 +418,16 @@
 		</div>
 	</Container>
 </section>
+
+<style>
+	/* Hide scrollbar for Chrome, Safari and Opera */
+	.scrollbar-hide::-webkit-scrollbar {
+		display: none;
+	}
+
+	/* Hide scrollbar for IE, Edge and Firefox */
+	.scrollbar-hide {
+		-ms-overflow-style: none;  /* IE and Edge */
+		scrollbar-width: none;  /* Firefox */
+	}
+</style>

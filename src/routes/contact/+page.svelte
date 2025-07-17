@@ -97,7 +97,10 @@
 	<Container>
 		<div class="max-w-4xl">
 			<div in:fly={{ y: 20, duration: 600, delay: 100 }}>
-				<Typography variant="h1" className="mb-6 font-display uppercase">
+				<Typography variant="overline" className="mb-2 text-jaune font-mono">
+					Contact
+				</Typography>
+				<Typography variant="h1" className="mb-6 font-display">
 					Parlons de votre projet
 				</Typography>
 			</div>
@@ -267,30 +270,11 @@
 						</div>
 						<div>
 							<Typography variant="body-small" className="text-noir/60 mb-1">Téléphone</Typography>
-							<Typography variant="body">+221 33 123 45 67</Typography>
+							<Typography variant="body">+229 01 67 23 24 43</Typography>
 						</div>
 						<div>
 							<Typography variant="body-small" className="text-noir/60 mb-1">Adresse</Typography>
-							<Typography variant="body">Dakar, Sénégal</Typography>
-						</div>
-					</div>
-				</div>
-
-				<!-- Office Hours -->
-				<div in:fly={{ x: 20, duration: 600, delay: 400 }}>
-					<Typography variant="h3" className="mb-6 font-bold">Heures d'ouverture</Typography>
-					<div class="space-y-2">
-						<div class="flex justify-between">
-							<Typography variant="body">Lundi - Vendredi</Typography>
-							<Typography variant="body" className="font-medium">9h - 18h</Typography>
-						</div>
-						<div class="flex justify-between">
-							<Typography variant="body">Samedi</Typography>
-							<Typography variant="body" className="font-medium">9h - 13h</Typography>
-						</div>
-						<div class="flex justify-between">
-							<Typography variant="body">Dimanche</Typography>
-							<Typography variant="body" className="font-medium">Fermé</Typography>
+							<Typography variant="body">Cotonou, Bénin</Typography>
 						</div>
 					</div>
 				</div>
@@ -345,11 +329,3 @@
 	</Container>
 </section>
 
-<!-- Map Section -->
-<section class="bg-gris-clair py-24">
-	<Container>
-		<div class="flex h-96 items-center justify-center bg-noir rounded-2xl">
-			<Typography variant="h3" className="text-blanc/20 font-display">Carte Interactive</Typography>
-		</div>
-	</Container>
-</section>

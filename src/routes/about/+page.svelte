@@ -7,48 +7,44 @@
 
 	const content = {
 		about: {
-			title: 'À propos de Labo Jaune',
+			title: 'À propos',
+			headline: 'Nous sommes le partenaire tech qui comprend vraiment l\'Afrique',
 			intro:
-				"Labo Jaune est une agence digitale créative basée en Afrique, spécialisée dans la conception et le développement d'expériences numériques sur mesure.",
-			mission:
-				'Notre mission est de créer des solutions digitales innovantes qui répondent aux besoins uniques du marché africain tout en respectant les standards internationaux de qualité.',
+				"Le Labo Jaune est une agence tech et design basée à Cotonou, au Bénin. Nous accompagnons les entreprises, notamment africaines, dans leur croissance à travers des solutions technologiques adaptées. Notre approche sur-mesure est centrée sur les besoins réels du client.",
+			mission: {
+				title: 'Notre Mission',
+				headline: 'Accompagner les entreprises africaines vers l\'excellence digitale',
+				description: 'Notre mission est d'offrir un accompagnement humain, rigoureux et créatif aux entreprises africaines pour les aider à bâtir des produits durables, pertinents et bien pensés.'
+			},
 			values: [
 				{
-					title: 'Innovation',
-					description: 'Nous repoussons constamment les limites du possible'
+					title: '🎯 Effectivité',
+					description: 'Nous créons des solutions qui fonctionnent réellement, avec des fonctionnalités concrètes qui répondent aux besoins spécifiques de nos clients.'
 				},
 				{
-					title: 'Authenticité',
-					description: 'Nous créons des expériences qui résonnent avec la culture locale'
+					title: '💼 Professionnalisme',
+					description: 'Nous maintenons les plus hauts standards de qualité dans notre travail, avec une approche rigoureuse et une attention aux détails qui inspire confiance.'
 				},
 				{
-					title: 'Excellence',
-					description: "Nous visons l'excellence dans chaque projet"
-				},
-				{
-					title: 'Impact',
-					description: 'Nous créons des solutions qui ont un impact réel'
+					title: '✨ Originalité',
+					description: 'Nous apportons une touche créative unique à chaque projet, en identifiant les solutions les plus simples, efficaces et durables pour votre contexte.'
 				}
 			]
 		},
 		team: {
 			title: 'Notre Équipe',
-			intro: "Des experts passionnés par l'innovation digitale en Afrique",
+			headline: 'Des experts passionnés qui transforment vos défis en opportunités',
+			intro: "Une équipe passionnée qui prend le temps de comprendre votre contexte et vos enjeux",
 			members: [
 				{
-					name: 'Amadou Diallo',
-					position: 'Fondateur & CEO',
-					bio: "Visionnaire tech avec 10 ans d'expérience dans le digital africain"
+					name: 'Ralph Gnonlonfoun',
+					position: 'Co-Fondateur, Product Designer & Développeur Senior',
+					bio: "Fort de 10 années d'expérience dans la tech internationale, Ralph a forgé son expertise au sein de l'agence Atelier Paon puis de la startup américaine Beans. Spécialiste des plateformes à fort impact social, il porte une vision ambitieuse : créer des expériences digitales qui transforment l'Afrique."
 				},
 				{
-					name: 'Fatima Ndiaye',
-					position: 'Directrice Créative',
-					bio: 'Experte en design thinking et expérience utilisateur'
-				},
-				{
-					name: 'Kofi Mensah',
-					position: 'CTO',
-					bio: 'Architecte solutions avec expertise en scalabilité'
+					name: 'Audrey Avocegamou',
+					position: 'Co-Fondatrice, Directrice de Projets & Développement',
+					bio: "Parcours marqué par une riche expérience dans la gestion de projets internationaux, notamment à l'Ambassade de France à Malabo. Son passage en tant que collaboratrice à la Fondation BOA au Maroc lui confère une compréhension unique des enjeux. Expertise pointue dans le montage de partenariats pour des projets communautaires."
 				}
 			]
 		}
@@ -56,10 +52,10 @@
 </script>
 
 <svelte:head>
-	<title>À propos - Labo Jaune | Agence digitale créative en Afrique</title>
+	<title>À propos - Le Labo Jaune | Agence tech et design à Cotonou</title>
 	<meta
 		name="description"
-		content="Découvrez Labo Jaune, agence digitale créative basée en Afrique. Notre mission est de créer des solutions numériques innovantes adaptées au marché africain."
+		content="Découvrez Le Labo Jaune, agence tech et design basée à Cotonou, Bénin. Nous accompagnons les entreprises africaines dans leur croissance avec des solutions technologiques sur-mesure."
 	/>
 	<meta
 		name="keywords"
@@ -69,10 +65,10 @@
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://labojaune.com/about" />
-	<meta property="og:title" content="À propos - Labo Jaune | Agence digitale créative en Afrique" />
+	<meta property="og:title" content="À propos - Le Labo Jaune | Agence tech et design à Cotonou" />
 	<meta
 		property="og:description"
-		content="Découvrez Labo Jaune, agence digitale créative basée en Afrique. Notre mission est de créer des solutions numériques innovantes."
+		content="Découvrez Le Labo Jaune, agence tech et design basée à Cotonou, Bénin. Nous accompagnons les entreprises africaines avec des solutions sur-mesure."
 	/>
 	<meta property="og:image" content="https://labojaune.com/og-image.jpg" />
 
@@ -81,11 +77,11 @@
 	<meta property="twitter:url" content="https://labojaune.com/about" />
 	<meta
 		property="twitter:title"
-		content="À propos - Labo Jaune | Agence digitale créative en Afrique"
+		content="À propos - Le Labo Jaune | Agence tech et design à Cotonou"
 	/>
 	<meta
 		property="twitter:description"
-		content="Découvrez Labo Jaune, agence digitale créative basée en Afrique."
+		content="Découvrez Le Labo Jaune, agence tech et design basée à Cotonou, Bénin."
 	/>
 	<meta property="twitter:image" content="https://labojaune.com/og-image.jpg" />
 
@@ -98,8 +94,11 @@
 	<Container>
 		<div class="max-w-4xl">
 			<div in:fly={{ y: 20, duration: 600, delay: 100 }}>
-				<Typography variant="h1" className="mb-6 font-display uppercase">
+				<Typography variant="overline" className="mb-2 text-jaune font-mono">
 					{content.about.title}
+				</Typography>
+				<Typography variant="h1" className="mb-6 font-display">
+					{content.about.headline}
 				</Typography>
 			</div>
 			<div in:fly={{ y: 20, duration: 600, delay: 200 }}>
@@ -115,9 +114,14 @@
 <section class="bg-gris-clair py-16">
 	<Container>
 		<div class="mx-auto max-w-4xl text-center">
-			<Typography variant="h2" className="mb-8 font-display uppercase">Notre Mission</Typography>
+			<Typography variant="overline" className="mb-2 text-jaune font-mono">
+				{content.about.mission.title}
+			</Typography>
+			<Typography variant="h2" className="mb-8 font-display">
+				{content.about.mission.headline}
+			</Typography>
 			<Typography variant="body-large" className="text-noir/80">
-				{content.about.mission}
+				{content.about.mission.description}
 			</Typography>
 		</div>
 	</Container>
@@ -129,7 +133,7 @@
 		<Typography variant="h2" className="mb-16 font-display uppercase text-center">
 			Nos Valeurs
 		</Typography>
-		<Grid cols={2} gap="lg">
+		<Grid cols={3} gap="lg">
 			{#each content.about.values as value, i}
 				<div
 					class="border-2 border-noir bg-blanc p-8 transition-all duration-300 hover:bg-jaune"
@@ -151,15 +155,18 @@
 <section class="bg-noir py-24 text-blanc">
 	<Container>
 		<div class="mb-16 text-center">
-			<Typography variant="h2" className="mb-4 font-display uppercase">
+			<Typography variant="overline" className="mb-2 text-jaune font-mono">
 				{content.team.title}
+			</Typography>
+			<Typography variant="h2" className="mb-4 font-display text-blanc">
+				{content.team.headline}
 			</Typography>
 			<Typography variant="body-large" className="text-blanc/80 max-w-2xl mx-auto">
 				{content.team.intro}
 			</Typography>
 		</div>
 
-		<Grid cols={3} gap="lg">
+		<Grid cols={2} gap="lg" className="max-w-4xl mx-auto">
 			{#each content.team.members as member, i}
 				<div class="text-center" in:fly={{ y: 20, duration: 600, delay: 100 + i * 100 }}>
 					<div class="mb-6 aspect-square bg-jaune"></div>
@@ -187,14 +194,65 @@
 			</Typography>
 			<div class="border-2 border-noir bg-jaune p-12">
 				<Typography variant="h3" className="mb-6 font-serif italic">
-					"Simple à comprendre, impossible à ignorer"
+					"Comme un médecin qui diagnostique avant de prescrire"
 				</Typography>
 				<Typography variant="body-large" className="text-noir/80">
-					Chez Labo Jaune, nous croyons que les meilleures solutions digitales sont celles qui
-					allient simplicité et impact. Notre approche minimaliste met l'accent sur l'essentiel :
-					créer des expériences qui parlent directement à votre audience africaine.
+					Au Labo Jaune, nous adoptons une approche diagnostique rigoureuse. Comme un médecin examine 
+					son patient avant de prescrire un traitement, nous analysons en profondeur votre écosystème 
+					numérique, vos symptômes business et vos objectifs de santé digitale. Ce n'est qu'après 
+					ce diagnostic complet que nous concevons la solution sur-mesure qui guérira vos défis 
+					et préviendra les complications futures.
 				</Typography>
 			</div>
+		</div>
+	</Container>
+</section>
+
+<!-- Collaboration Section -->
+<section class="bg-blanc py-24">
+	<Container>
+		<div class="mx-auto max-w-4xl">
+			<Typography variant="h2" className="mb-8 font-display uppercase text-center">
+				Notre Réseau de Collaboration
+			</Typography>
+			<Typography variant="body-large" className="mb-12 text-center text-noir/80">
+				Le Labo Jaune travaille avec un réseau d'experts indépendants dans des domaines complémentaires pour offrir des solutions complètes et adaptées.
+			</Typography>
+			<Grid cols={3} gap="lg" className="max-w-3xl mx-auto">
+				<div
+					class="border-2 border-noir bg-gris-clair p-6 text-center transition-all duration-300 hover:bg-jaune rounded-2xl"
+					in:fadeScale={{ duration: 600, delay: 100 }}
+				>
+					<Typography variant="h4" className="mb-3 font-bold">
+						🔍 SEO
+					</Typography>
+					<Typography variant="body" className="text-noir/70">
+						Experts en référencement pour maximiser votre visibilité en ligne
+					</Typography>
+				</div>
+				<div
+					class="border-2 border-noir bg-gris-clair p-6 text-center transition-all duration-300 hover:bg-jaune rounded-2xl"
+					in:fadeScale={{ duration: 600, delay: 200 }}
+				>
+					<Typography variant="h4" className="mb-3 font-bold">
+						📢 Marketing
+					</Typography>
+					<Typography variant="body" className="text-noir/70">
+						Spécialistes en stratégies marketing adaptées au marché africain
+					</Typography>
+				</div>
+				<div
+					class="border-2 border-noir bg-gris-clair p-6 text-center transition-all duration-300 hover:bg-jaune rounded-2xl"
+					in:fadeScale={{ duration: 600, delay: 300 }}
+				>
+					<Typography variant="h4" className="mb-3 font-bold">
+						🎨 Design Spécialisé
+					</Typography>
+					<Typography variant="body" className="text-noir/70">
+						Designers créatifs pour des projets nécessitant une expertise particulière
+					</Typography>
+				</div>
+			</Grid>
 		</div>
 	</Container>
 </section>

@@ -8,6 +8,7 @@
 	const content = {
 		services: {
 			title: 'Nos Services',
+			headline: 'Transformez vos idées en solutions digitales performantes',
 			intro: 'Des solutions complètes pour votre transformation digitale',
 			list: [
 				{
@@ -92,6 +93,7 @@
 		},
 		process: {
 			title: 'Notre Processus',
+			headline: 'Une méthodologie éprouvée qui garantit votre succès',
 			intro: 'Une approche méthodique pour des résultats exceptionnels',
 			steps: [
 				{
@@ -165,8 +167,11 @@
 	<Container>
 		<div class="mx-auto max-w-4xl text-center">
 			<div in:fly={{ y: 20, duration: 600, delay: 100 }}>
-				<Typography variant="h1" className="mb-6 font-display uppercase">
+				<Typography variant="overline" className="mb-2 text-jaune font-mono">
 					{content.services.title}
+				</Typography>
+				<Typography variant="h1" className="mb-6 font-display">
+					{content.services.headline}
 				</Typography>
 			</div>
 			<div in:fly={{ y: 20, duration: 600, delay: 200 }}>
@@ -237,8 +242,11 @@
 <section class="bg-noir py-24 text-blanc">
 	<Container>
 		<div class="mb-16 text-center">
-			<Typography variant="h2" className="mb-4 font-display uppercase">
+			<Typography variant="overline" className="mb-2 text-jaune font-mono">
 				{content.process.title}
+			</Typography>
+			<Typography variant="h2" className="mb-4 font-display text-blanc">
+				{content.process.headline}
 			</Typography>
 			<Typography variant="body-large" className="text-blanc/80 max-w-2xl mx-auto">
 				{content.process.intro}
