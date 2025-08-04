@@ -17,6 +17,7 @@ Toguna World est un projet artistique innovant de Pierre-Christophe Gam, centré
 ## Le Défi
 
 Créer une expérience web qui:
+
 - Traduise une vision artistique complexe en interface digitale
 - Facilite l'exploration de contenus multimédias variés
 - Crée une atmosphère immersive et mystique
@@ -70,4 +71,4 @@ Le site web de Toguna World est devenu une extension digitale de l'installation 
 
 > "Labo Jaune a compris que ce projet nécessitait plus qu'un simple site web. Ils ont créé une expérience digitale qui capture l'essence même de Toguna World - un espace où les rêves africains prennent forme."
 
-*— Pierre-Christophe Gam*
+_— Pierre-Christophe Gam_

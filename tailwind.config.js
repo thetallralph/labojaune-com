@@ -15,7 +15,7 @@ export default {
 			},
 			fontFamily: {
 				sans: ['Space Grotesk', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-				display: ['Bebas Neue', 'Impact', 'sans-serif'],
+				display: ['Literata', 'Georgia', 'serif'],
 				serif: ['Playfair Display', 'Georgia', 'serif'],
 				mono: ['JetBrains Mono', 'Courier New', 'monospace']
 			},

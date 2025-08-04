@@ -54,7 +54,7 @@
 					id: 'analytics',
 					title: '📈 Analytics & Optimisation',
 					description:
-						'Mise en place d\'outils de mesure, analyse des données et recommandations pour améliorer vos performances.',
+						"Mise en place d'outils de mesure, analyse des données et recommandations pour améliorer vos performances.",
 					features: [
 						'Tableaux de bord personnalisés',
 						'Tracking et analyse de données',
@@ -67,7 +67,7 @@
 					id: 'mobile',
 					title: '📱 Applications Mobiles',
 					description:
-						'Développement d\'applications natives et hybrides pour iOS et Android, avec une expertise particulière dans les solutions de paiement mobile.',
+						"Développement d'applications natives et hybrides pour iOS et Android, avec une expertise particulière dans les solutions de paiement mobile.",
 					features: [
 						'Applications natives iOS/Android',
 						'Applications hybrides multi-plateformes',
@@ -200,7 +200,7 @@
 						<Typography variant="overline" className="text-jaune font-mono">
 							0{i + 1}
 						</Typography>
-						<Typography variant="h2" className="font-display uppercase">
+						<Typography variant="h2" className="font-display">
 							{service.title}
 						</Typography>
 						<Typography variant="body-large" className="text-noir/80">
@@ -224,12 +224,12 @@
 					</div>
 
 					<div
-						class="relative aspect-video overflow-hidden bg-noir rounded-2xl"
+						class="relative aspect-video overflow-hidden rounded-2xl bg-noir"
 						class:lg:col-start-1={i % 2 === 1}
 						in:fadeScale={{ duration: 600, delay: 200 }}
 					>
 						<div class="absolute inset-0 flex items-center justify-center">
-							<div class="h-24 w-24 bg-jaune rounded-2xl"></div>
+							<div class="h-24 w-24 rounded-2xl bg-jaune"></div>
 						</div>
 					</div>
 				</div>
@@ -271,10 +271,8 @@
 <!-- CTA Section -->
 <section class="py-24">
 	<Container>
-		<div class="border-2 border-noir bg-jaune p-12 text-center text-noir lg:p-16 rounded-2xl">
-			<Typography variant="h2" className="mb-4 font-display uppercase">
-				Prêt à démarrer ?
-			</Typography>
+		<div class="rounded-2xl border-2 border-noir bg-jaune p-12 text-center text-noir lg:p-16">
+			<Typography variant="h2" className="mb-4 font-display">Prêt à démarrer ?</Typography>
 			<Typography variant="body-large" className="mb-8 text-noir/80 max-w-2xl mx-auto">
 				Discutons de votre projet et voyons comment nous pouvons vous aider à atteindre vos
 				objectifs.

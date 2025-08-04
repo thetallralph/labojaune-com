@@ -39,10 +39,7 @@
 	class="fixed left-0 right-0 top-0 z-50 border-b border-noir/20 bg-blanc-casse/95 backdrop-blur-sm"
 >
 	<Container>
-		<nav
-			class="flex h-20 items-center justify-between"
-			aria-label="Navigation principale"
-		>
+		<nav class="flex h-20 items-center justify-between" aria-label="Navigation principale">
 			<Logo />
 
 			<!-- Desktop Navigation -->

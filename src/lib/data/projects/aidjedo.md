@@ -17,6 +17,7 @@ AÏDJÈDO – PAIX DU CŒUR est une ONG béninoise dédiée à l'amélioration d
 ## Le Défi
 
 L'ONG avait besoin d'une présence digitale moderne pour:
+
 - Faciliter les dons en ligne de manière sécurisée
 - Gérer efficacement les adhésions des membres
 - Communiquer sur leurs 6 programmes d'action
@@ -54,4 +55,4 @@ Nous avons conçu et développé un site web complet qui traduit parfaitement la
 
 > "Labo Jaune a su comprendre notre mission et la traduire en une plateforme digitale qui facilite réellement notre travail humanitaire. Les résultats parlent d'eux-mêmes."
 
-*— Direction d'AÏDJÈDO*
+_— Direction d'AÏDJÈDO_

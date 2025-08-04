@@ -86,7 +86,7 @@
 				<Typography variant="overline" className="mb-4 text-jaune font-mono">Services</Typography>
 			</div>
 			<div in:fly={{ y: 20, duration: 600, delay: 200 }}>
-				<Typography variant="h1" className="mb-6 font-display uppercase">
+				<Typography variant="h1" className="mb-6 font-display">
 					{service.title}
 				</Typography>
 			</div>
@@ -102,7 +102,7 @@
 <!-- Features Section -->
 <section class="py-24">
 	<Container>
-		<Typography variant="h2" className="mb-16 font-display uppercase text-center">
+		<Typography variant="h2" className="mb-16 font-display text-center">
 			Ce que nous offrons
 		</Typography>
 
@@ -127,9 +127,7 @@
 <!-- Process Section -->
 <section class="bg-gris-clair py-24">
 	<Container>
-		<Typography variant="h2" className="mb-16 font-display uppercase text-center">
-			Notre Approche
-		</Typography>
+		<Typography variant="h2" className="mb-16 font-display text-center">Notre Approche</Typography>
 
 		<div class="mx-auto max-w-4xl space-y-8">
 			<div class="border-2 border-noir bg-blanc p-8">
@@ -162,7 +160,7 @@
 <!-- Related Services -->
 <section class="py-24">
 	<Container>
-		<Typography variant="h2" className="mb-16 font-display uppercase text-center">
+		<Typography variant="h2" className="mb-16 font-display text-center">
 			Services Complémentaires
 		</Typography>
 
@@ -195,7 +193,7 @@
 <section class="bg-jaune py-24">
 	<Container>
 		<div class="text-center">
-			<Typography variant="h2" className="mb-4 font-display uppercase">
+			<Typography variant="h2" className="mb-4 font-display">
 				Prêt à élaborer votre stratégie ?
 			</Typography>
 			<Typography variant="body-large" className="mb-8 text-noir/80 max-w-2xl mx-auto">

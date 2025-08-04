@@ -97,12 +97,8 @@
 	<Container>
 		<div class="max-w-4xl">
 			<div in:fly={{ y: 20, duration: 600, delay: 100 }}>
-				<Typography variant="overline" className="mb-2 text-jaune font-mono">
-					Contact
-				</Typography>
-				<Typography variant="h1" className="mb-6 font-display">
-					Parlons de votre projet
-				</Typography>
+				<Typography variant="overline" className="mb-2 text-jaune font-mono">Contact</Typography>
+				<Typography variant="h1" className="mb-6 font-display">Parlons de votre projet</Typography>
 			</div>
 			<div in:fly={{ y: 20, duration: 600, delay: 200 }}>
 				<Typography variant="body-large" className="text-noir/80">
@@ -132,8 +128,8 @@
 								type="text"
 								bind:value={formData.name}
 								required
-								class="w-full border-2 border-noir bg-blanc px-4 py-3 text-noir placeholder-noir/40
-									transition-colors duration-300 focus:border-jaune focus:outline-none rounded-xl"
+								class="w-full rounded-xl border-2 border-noir bg-blanc px-4 py-3 text-noir
+									placeholder-noir/40 transition-colors duration-300 focus:border-jaune focus:outline-none"
 								placeholder="Jean Dupont"
 							/>
 						</div>
@@ -148,8 +144,8 @@
 								type="email"
 								bind:value={formData.email}
 								required
-								class="w-full border-2 border-noir bg-blanc px-4 py-3 text-noir placeholder-noir/40
-									transition-colors duration-300 focus:border-jaune focus:outline-none rounded-xl"
+								class="w-full rounded-xl border-2 border-noir bg-blanc px-4 py-3 text-noir
+									placeholder-noir/40 transition-colors duration-300 focus:border-jaune focus:outline-none"
 								placeholder="jean@entreprise.com"
 							/>
 						</div>
@@ -180,9 +176,9 @@
 								id="projectType"
 								bind:value={formData.projectType}
 								required
-								class="w-full cursor-pointer appearance-none border-2 border-noir bg-blanc px-4
-									py-3 text-noir transition-colors duration-300
-									focus:border-jaune focus:outline-none rounded-xl"
+								class="w-full cursor-pointer appearance-none rounded-xl border-2 border-noir bg-blanc
+									px-4 py-3 text-noir transition-colors
+									duration-300 focus:border-jaune focus:outline-none"
 								style="background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27currentColor%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpolyline points=%276 9 12 15 18 9%27%3e%3c/polyline%3e%3c/svg%3e'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.5em;"
 							>
 								<option value="">Sélectionnez un type</option>
@@ -200,9 +196,9 @@
 							<select
 								id="budget"
 								bind:value={formData.budget}
-								class="w-full cursor-pointer appearance-none border-2 border-noir bg-blanc px-4
-									py-3 text-noir transition-colors duration-300
-									focus:border-jaune focus:outline-none rounded-xl"
+								class="w-full cursor-pointer appearance-none rounded-xl border-2 border-noir bg-blanc
+									px-4 py-3 text-noir transition-colors
+									duration-300 focus:border-jaune focus:outline-none"
 								style="background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27currentColor%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpolyline points=%276 9 12 15 18 9%27%3e%3c/polyline%3e%3c/svg%3e'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.5em;"
 							>
 								<option value="">Sélectionnez un budget</option>
@@ -225,8 +221,8 @@
 							bind:value={formData.message}
 							required
 							rows="6"
-							class="w-full resize-y border-2 border-noir bg-blanc px-4 py-3 text-noir
-								placeholder-noir/40 transition-colors duration-300 focus:border-jaune focus:outline-none rounded-xl"
+							class="w-full resize-y rounded-xl border-2 border-noir bg-blanc px-4 py-3
+								text-noir placeholder-noir/40 transition-colors duration-300 focus:border-jaune focus:outline-none"
 							placeholder="Décrivez votre projet, vos objectifs et vos attentes..."
 						></textarea>
 					</div>
@@ -287,7 +283,7 @@
 							href="https://linkedin.com/company/labojaune"
 							target="_blank"
 							rel="noopener noreferrer"
-							class="border-2 border-noir p-3 transition-all duration-300 hover:bg-noir hover:text-blanc rounded-xl"
+							class="rounded-xl border-2 border-noir p-3 transition-all duration-300 hover:bg-noir hover:text-blanc"
 							aria-label="LinkedIn"
 						>
 							<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -300,7 +296,7 @@
 							href="https://twitter.com/labojaune"
 							target="_blank"
 							rel="noopener noreferrer"
-							class="border-2 border-noir p-3 transition-all duration-300 hover:bg-noir hover:text-blanc rounded-xl"
+							class="rounded-xl border-2 border-noir p-3 transition-all duration-300 hover:bg-noir hover:text-blanc"
 							aria-label="Twitter"
 						>
 							<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -313,7 +309,7 @@
 							href="https://instagram.com/labojaune"
 							target="_blank"
 							rel="noopener noreferrer"
-							class="border-2 border-noir p-3 transition-all duration-300 hover:bg-noir hover:text-blanc rounded-xl"
+							class="rounded-xl border-2 border-noir p-3 transition-all duration-300 hover:bg-noir hover:text-blanc"
 							aria-label="Instagram"
 						>
 							<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -328,4 +324,3 @@
 		</Grid>
 	</Container>
 </section>
-

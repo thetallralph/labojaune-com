@@ -11,7 +11,7 @@
 
 	const content = {
 		hero: {
-			headline: "Accompagner votre croissance avec des solutions tech adaptées",
+			headline: 'Accompagner votre croissance avec des solutions tech adaptées',
 			subheadline:
 				'Agence tech et design basée à Cotonou, nous créons des solutions sur-mesure pour les entreprises africaines',
 			cta: {
@@ -101,7 +101,8 @@
 					client: 'FDFA',
 					category: 'Site Institutionnel',
 					year: '2024',
-					description: "Plateforme moderne positionnant la FDFA comme acteur majeur du football africain"
+					description:
+						'Plateforme moderne positionnant la FDFA comme acteur majeur du football africain'
 				}
 			]
 		},
@@ -142,10 +143,7 @@
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://labojaune.com/" />
-	<meta
-		property="og:title"
-		content="Le Labo Jaune - Agence tech et design à Cotonou, Bénin"
-	/>
+	<meta property="og:title" content="Le Labo Jaune - Agence tech et design à Cotonou, Bénin" />
 	<meta
 		property="og:description"
 		content="Agence tech et design basée à Cotonou. Nous accompagnons les entreprises africaines avec des solutions technologiques sur-mesure."
@@ -155,10 +153,7 @@
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image" />
 	<meta property="twitter:url" content="https://labojaune.com/" />
-	<meta
-		property="twitter:title"
-		content="Le Labo Jaune - Agence tech et design à Cotonou, Bénin"
-	/>
+	<meta property="twitter:title" content="Le Labo Jaune - Agence tech et design à Cotonou, Bénin" />
 	<meta
 		property="twitter:description"
 		content="Agence tech et design basée à Cotonou. Solutions technologiques sur-mesure pour entreprises africaines."
@@ -174,7 +169,7 @@
 	<Container>
 		<div class="mx-auto max-w-4xl text-center">
 			<div in:fly={{ y: 20, duration: 600, delay: 100 }}>
-				<Typography variant="display" className="mb-6 font-display uppercase">
+				<Typography variant="display" className="mb-6 font-display">
 					{@html content.hero.headline.replace(
 						'transforment',
 						'<span class="bg-noir text-jaune px-2">transforment</span>'
@@ -221,7 +216,7 @@
 		<Grid cols={2} gap="lg">
 			{#each content.services.list as service, i}
 				<div
-					class="border-2 border-noir bg-gris-clair p-8 text-noir transition-all duration-300 hover:bg-jaune rounded-2xl"
+					class="rounded-2xl border-2 border-noir bg-gris-clair p-8 text-noir transition-all duration-300 hover:bg-jaune"
 					in:fly={{ y: 20, duration: 600, delay: 100 + i * 100 }}
 				>
 					<Typography variant="h3" className="mb-4 font-bold">
@@ -262,7 +257,7 @@
 			{#each content.process.steps as step, i}
 				<div class="relative" in:fly={{ y: 20, duration: 600, delay: 100 + i * 100 }}>
 					<div
-						class="h-full bg-noir p-8 text-blanc transition-all duration-300 hover:bg-jaune hover:text-noir rounded-2xl"
+						class="h-full rounded-2xl bg-noir p-8 text-blanc transition-all duration-300 hover:bg-jaune hover:text-noir"
 					>
 						<Typography variant="h1" className="mb-4 font-display">
 							{step.number}
@@ -284,7 +279,7 @@
 </section>
 
 <!-- Featured Projects -->
-<section class="bg-gris-clair py-24 overflow-hidden">
+<section class="overflow-hidden bg-gris-clair py-24">
 	<Container>
 		<div class="mb-16 text-center">
 			<Typography variant="overline" className="mb-2 text-jaune font-mono">
@@ -301,15 +296,15 @@
 
 	<!-- Horizontal scrollable projects -->
 	<div class="relative">
-		<div class="flex gap-6 overflow-x-auto scrollbar-hide px-6 lg:px-12 pb-4">
+		<div class="scrollbar-hide flex gap-6 overflow-x-auto px-6 pb-4 lg:px-12">
 			{#each allProjects as project, i}
-				<div 
-					class="flex-none w-[90vw] sm:w-[450px] lg:w-[500px]"
+				<div
+					class="w-[90vw] flex-none sm:w-[450px] lg:w-[500px]"
 					in:fly={{ x: 50, duration: 600, delay: 100 + i * 50 }}
 				>
 					<a
 						href="/portfolio/{project.id}"
-						class="group relative block overflow-hidden border-2 border-noir bg-blanc transition-all duration-300 hover:border-jaune rounded-2xl cursor-pointer no-underline h-full"
+						class="group relative block h-full cursor-pointer overflow-hidden rounded-2xl border-2 border-noir bg-blanc no-underline transition-all duration-300 hover:border-jaune"
 					>
 						<div class="relative aspect-video overflow-hidden bg-gris-clair">
 							<div
@@ -339,7 +334,7 @@
 								{project.description}
 							</Typography>
 							<span
-								class="inline-flex items-center text-noir group-hover:translate-x-2 transition-transform font-medium"
+								class="inline-flex items-center font-medium text-noir transition-transform group-hover:translate-x-2"
 							>
 								Voir le projet →
 							</span>
@@ -351,7 +346,7 @@
 	</div>
 
 	<Container>
-		<div class="text-center mt-12">
+		<div class="mt-12 text-center">
 			<Button href="/portfolio" size="large" variant="secondary">
 				{content.portfolio.cta}
 			</Button>
@@ -363,7 +358,7 @@
 <section class="bg-blanc py-24">
 	<Container>
 		<div class="mb-16 text-center">
-			<Typography variant="h2" className="mb-4 font-display uppercase text-noir">
+			<Typography variant="h2" className="mb-4 font-display text-noir">
 				{content.testimonials.title}
 			</Typography>
 		</div>
@@ -371,7 +366,7 @@
 		<div class="mx-auto max-w-4xl">
 			{#each content.testimonials.list as testimonial, i}
 				<div
-					class="border-2 border-noir bg-jaune p-12 rounded-2xl"
+					class="rounded-2xl border-2 border-noir bg-jaune p-12"
 					in:fly={{ y: 20, duration: 600, delay: 100 + i * 100 }}
 				>
 					<Typography variant="h3" className="mb-8 text-noir font-serif italic leading-relaxed">
@@ -401,18 +396,14 @@
 <!-- CTA Section -->
 <section class="py-24">
 	<Container>
-		<div class="bg-noir p-12 text-center text-blanc lg:p-16 rounded-2xl">
-			<Typography variant="h2" className="mb-4 font-display uppercase">
+		<div class="rounded-2xl bg-noir p-12 text-center text-blanc lg:p-16">
+			<Typography variant="h2" className="mb-4 font-display">
 				{content.cta.banner.title}
 			</Typography>
 			<Typography variant="body-large" className="mb-8 text-blanc/90 max-w-2xl mx-auto">
 				{content.cta.banner.description}
 			</Typography>
-			<Button
-				href="/contact"
-				variant="primary-inverse"
-				size="large"
-			>
+			<Button href="/contact" variant="primary-inverse" size="large">
 				{content.cta.banner.button}
 			</Button>
 		</div>
@@ -427,7 +418,7 @@
 
 	/* Hide scrollbar for IE, Edge and Firefox */
 	.scrollbar-hide {
-		-ms-overflow-style: none;  /* IE and Edge */
-		scrollbar-width: none;  /* Firefox */
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
 	}
 </style>

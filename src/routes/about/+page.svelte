@@ -8,33 +8,37 @@
 	const content = {
 		about: {
 			title: 'À propos',
-			headline: 'Nous sommes le partenaire tech qui comprend vraiment l\'Afrique',
+			headline: "Nous sommes le partenaire tech qui comprend vraiment l'Afrique",
 			intro:
-				"Le Labo Jaune est une agence tech et design basée à Cotonou, au Bénin. Nous accompagnons les entreprises, notamment africaines, dans leur croissance à travers des solutions technologiques adaptées. Notre approche sur-mesure est centrée sur les besoins réels du client.",
+				'Le Labo Jaune est une agence tech et design basée à Cotonou, au Bénin. Nous accompagnons les entreprises, notamment africaines, dans leur croissance à travers des solutions technologiques adaptées. Notre approche sur-mesure est centrée sur les besoins réels du client.',
 			mission: {
 				title: 'Notre Mission',
-				headline: 'Accompagner les entreprises africaines vers l\'excellence digitale',
-				description: 'Notre mission est d'offrir un accompagnement humain, rigoureux et créatif aux entreprises africaines pour les aider à bâtir des produits durables, pertinents et bien pensés.'
+				headline: "Accompagner les entreprises africaines vers l'excellence digitale",
+				description:
+					"Notre mission est d'offrir un accompagnement humain, rigoureux et créatif aux entreprises africaines pour les aider à bâtir des produits durables, pertinents et bien pensés."
 			},
 			values: [
 				{
 					title: '🎯 Effectivité',
-					description: 'Nous créons des solutions qui fonctionnent réellement, avec des fonctionnalités concrètes qui répondent aux besoins spécifiques de nos clients.'
+					description:
+						'Nous créons des solutions qui fonctionnent réellement, avec des fonctionnalités concrètes qui répondent aux besoins spécifiques de nos clients.'
 				},
 				{
 					title: '💼 Professionnalisme',
-					description: 'Nous maintenons les plus hauts standards de qualité dans notre travail, avec une approche rigoureuse et une attention aux détails qui inspire confiance.'
+					description:
+						'Nous maintenons les plus hauts standards de qualité dans notre travail, avec une approche rigoureuse et une attention aux détails qui inspire confiance.'
 				},
 				{
 					title: '✨ Originalité',
-					description: 'Nous apportons une touche créative unique à chaque projet, en identifiant les solutions les plus simples, efficaces et durables pour votre contexte.'
+					description:
+						'Nous apportons une touche créative unique à chaque projet, en identifiant les solutions les plus simples, efficaces et durables pour votre contexte.'
 				}
 			]
 		},
 		team: {
 			title: 'Notre Équipe',
 			headline: 'Des experts passionnés qui transforment vos défis en opportunités',
-			intro: "Une équipe passionnée qui prend le temps de comprendre votre contexte et vos enjeux",
+			intro: 'Une équipe passionnée qui prend le temps de comprendre votre contexte et vos enjeux',
 			members: [
 				{
 					name: 'Ralph Gnonlonfoun',
@@ -130,9 +134,7 @@
 <!-- Values Section -->
 <section class="py-24">
 	<Container>
-		<Typography variant="h2" className="mb-16 font-display uppercase text-center">
-			Nos Valeurs
-		</Typography>
+		<Typography variant="h2" className="mb-16 font-display text-center">Nos Valeurs</Typography>
 		<Grid cols={3} gap="lg">
 			{#each content.about.values as value, i}
 				<div
@@ -189,19 +191,17 @@
 <section class="py-24">
 	<Container>
 		<div class="mx-auto max-w-4xl">
-			<Typography variant="h2" className="mb-8 font-display uppercase text-center">
-				Notre Culture
-			</Typography>
+			<Typography variant="h2" className="mb-8 font-display text-center">Notre Culture</Typography>
 			<div class="border-2 border-noir bg-jaune p-12">
 				<Typography variant="h3" className="mb-6 font-serif italic">
 					"Comme un médecin qui diagnostique avant de prescrire"
 				</Typography>
 				<Typography variant="body-large" className="text-noir/80">
-					Au Labo Jaune, nous adoptons une approche diagnostique rigoureuse. Comme un médecin examine 
-					son patient avant de prescrire un traitement, nous analysons en profondeur votre écosystème 
-					numérique, vos symptômes business et vos objectifs de santé digitale. Ce n'est qu'après 
-					ce diagnostic complet que nous concevons la solution sur-mesure qui guérira vos défis 
-					et préviendra les complications futures.
+					Au Labo Jaune, nous adoptons une approche diagnostique rigoureuse. Comme un médecin
+					examine son patient avant de prescrire un traitement, nous analysons en profondeur votre
+					écosystème numérique, vos symptômes business et vos objectifs de santé digitale. Ce n'est
+					qu'après ce diagnostic complet que nous concevons la solution sur-mesure qui guérira vos
+					défis et préviendra les complications futures.
 				</Typography>
 			</div>
 		</div>
@@ -212,42 +212,37 @@
 <section class="bg-blanc py-24">
 	<Container>
 		<div class="mx-auto max-w-4xl">
-			<Typography variant="h2" className="mb-8 font-display uppercase text-center">
+			<Typography variant="h2" className="mb-8 font-display text-center">
 				Notre Réseau de Collaboration
 			</Typography>
 			<Typography variant="body-large" className="mb-12 text-center text-noir/80">
-				Le Labo Jaune travaille avec un réseau d'experts indépendants dans des domaines complémentaires pour offrir des solutions complètes et adaptées.
+				Le Labo Jaune travaille avec un réseau d'experts indépendants dans des domaines
+				complémentaires pour offrir des solutions complètes et adaptées.
 			</Typography>
 			<Grid cols={3} gap="lg" className="max-w-3xl mx-auto">
 				<div
-					class="border-2 border-noir bg-gris-clair p-6 text-center transition-all duration-300 hover:bg-jaune rounded-2xl"
+					class="rounded-2xl border-2 border-noir bg-gris-clair p-6 text-center transition-all duration-300 hover:bg-jaune"
 					in:fadeScale={{ duration: 600, delay: 100 }}
 				>
-					<Typography variant="h4" className="mb-3 font-bold">
-						🔍 SEO
-					</Typography>
+					<Typography variant="h4" className="mb-3 font-bold">🔍 SEO</Typography>
 					<Typography variant="body" className="text-noir/70">
 						Experts en référencement pour maximiser votre visibilité en ligne
 					</Typography>
 				</div>
 				<div
-					class="border-2 border-noir bg-gris-clair p-6 text-center transition-all duration-300 hover:bg-jaune rounded-2xl"
+					class="rounded-2xl border-2 border-noir bg-gris-clair p-6 text-center transition-all duration-300 hover:bg-jaune"
 					in:fadeScale={{ duration: 600, delay: 200 }}
 				>
-					<Typography variant="h4" className="mb-3 font-bold">
-						📢 Marketing
-					</Typography>
+					<Typography variant="h4" className="mb-3 font-bold">📢 Marketing</Typography>
 					<Typography variant="body" className="text-noir/70">
 						Spécialistes en stratégies marketing adaptées au marché africain
 					</Typography>
 				</div>
 				<div
-					class="border-2 border-noir bg-gris-clair p-6 text-center transition-all duration-300 hover:bg-jaune rounded-2xl"
+					class="rounded-2xl border-2 border-noir bg-gris-clair p-6 text-center transition-all duration-300 hover:bg-jaune"
 					in:fadeScale={{ duration: 600, delay: 300 }}
 				>
-					<Typography variant="h4" className="mb-3 font-bold">
-						🎨 Design Spécialisé
-					</Typography>
+					<Typography variant="h4" className="mb-3 font-bold">🎨 Design Spécialisé</Typography>
 					<Typography variant="body" className="text-noir/70">
 						Designers créatifs pour des projets nécessitant une expertise particulière
 					</Typography>
@@ -261,7 +256,7 @@
 <section class="bg-gris-clair py-24">
 	<Container>
 		<div class="text-center">
-			<Typography variant="h2" className="mb-4 font-display uppercase">
+			<Typography variant="h2" className="mb-4 font-display">
 				Prêt à travailler ensemble ?
 			</Typography>
 			<Typography variant="body-large" className="mb-8 text-noir/80 max-w-2xl mx-auto">

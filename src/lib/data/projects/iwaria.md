@@ -16,6 +16,7 @@ Iwaria est une plateforme innovante offrant des photos africaines de haute quali
 ## Le Défi
 
 Concevoir une interface qui:
+
 - Mette en valeur des milliers de photos haute qualité
 - Facilite la recherche et la découverte de contenus
 - Offre une expérience de navigation fluide
@@ -67,4 +68,4 @@ Notre design célèbre la diversité et la beauté de l'Afrique tout en offrant 
 
 > "L'interface créée par Labo Jaune a transformé notre vision en réalité. La simplicité du design permet à nos photos de briller tout en offrant une expérience de navigation exceptionnelle."
 
-*— Équipe Iwaria*
+_— Équipe Iwaria_

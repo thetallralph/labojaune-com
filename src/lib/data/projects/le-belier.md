@@ -17,6 +17,7 @@ L'Agence Le Bélier est une agence de voyage et de tourisme basée à Natitingou
 ## Le Défi
 
 L'agence avait besoin d'une plateforme unifiée pour:
+
 - Intégrer trois activités distinctes (tourisme, hôtellerie, restauration)
 - Faciliter les réservations en ligne
 - Renforcer sa crédibilité internationale
@@ -65,4 +66,4 @@ Le site web de l'Agence Le Bélier est devenu une vitrine digitale de l'hospital
 
 > "Notre nouveau site web a transformé notre activité. Les réservations en ligne ont explosé et nous touchons maintenant une clientèle internationale que nous n'aurions jamais pu atteindre autrement."
 
-*— Direction de l'Agence Le Bélier*
+_— Direction de l'Agence Le Bélier_

@@ -17,6 +17,7 @@ La Fondation pour le Développement du Football Africain (FDFA) œuvre pour la p
 ## Le Défi
 
 La FDFA avait besoin d'une plateforme institutionnelle qui:
+
 - Positionne l'organisation comme acteur majeur du football africain
 - Mette en valeur ses partenaires prestigieux (CAF, ministères, médias)
 - Communique efficacement sa vision de professionnalisation

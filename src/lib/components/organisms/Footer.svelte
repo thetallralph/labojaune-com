@@ -7,7 +7,7 @@
 
 	const content = {
 		footer: {
-			tagline: "Agence tech et design pour la croissance des entreprises africaines",
+			tagline: 'Agence tech et design pour la croissance des entreprises africaines',
 			links: [
 				{
 					title: 'Services',

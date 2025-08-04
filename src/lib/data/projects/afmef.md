@@ -16,6 +16,7 @@ L'Association des Femmes du Ministère de l'Économie et des Finances (AFMEF) es
 ## Le Défi
 
 L'AFMEF cherchait à:
+
 - Moderniser sa communication avec les membres
 - Simplifier le processus d'adhésion
 - Communiquer clairement ses 7 objectifs stratégiques
@@ -65,4 +66,4 @@ Le design et les fonctionnalités du site renforcent constamment le message d'au
 
 > "La plateforme digitale créée par Labo Jaune a révolutionné notre façon de communiquer avec nos membres. L'augmentation spectaculaire des adhésions témoigne de son efficacité."
 
-*— Bureau exécutif de l'AFMEF*
+_— Bureau exécutif de l'AFMEF_

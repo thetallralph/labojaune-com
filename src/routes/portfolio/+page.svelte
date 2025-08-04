@@ -12,7 +12,8 @@
 			client: 'AÏDJÈDO – PAIX DU CŒUR',
 			category: 'Site Web',
 			year: '2024',
-			description: 'Plateforme complète avec système de dons en ligne, espace membre et système de signalement pour cette ONG béninoise dédiée aux personnes vulnérables',
+			description:
+				'Plateforme complète avec système de dons en ligne, espace membre et système de signalement pour cette ONG béninoise dédiée aux personnes vulnérables',
 			tags: ['UX Design', 'Développement', 'Système de dons', 'Espace membre'],
 			featured: true,
 			heroColor: '#E85D75',
@@ -30,7 +31,8 @@
 			client: 'Fondation pour le Développement du Football Africain',
 			category: 'Site Institutionnel',
 			year: '2024',
-			description: 'Plateforme institutionnelle moderne positionnant la FDFA comme acteur majeur du développement du football africain avec mise en avant de 14 partenaires prestigieux',
+			description:
+				'Plateforme institutionnelle moderne positionnant la FDFA comme acteur majeur du développement du football africain avec mise en avant de 14 partenaires prestigieux',
 			tags: ['Design', 'Développement', 'Partenariats', 'Animation'],
 			featured: true,
 			heroColor: '#00A86B',
@@ -47,7 +49,8 @@
 			client: 'Agence Le Bélier Tourisme',
 			category: 'Site Web',
 			year: '2024',
-			description: 'Site web intégrant tourisme, hôtellerie et restauration avec système de réservation en ligne et intégration des plateformes internationales',
+			description:
+				'Site web intégrant tourisme, hôtellerie et restauration avec système de réservation en ligne et intégration des plateformes internationales',
 			tags: ['UX/UI', 'Réservation', 'Multi-services', 'WhatsApp'],
 			featured: true,
 			heroColor: '#FF6B35',
@@ -65,7 +68,8 @@
 			client: 'Association des Femmes du MEF',
 			category: 'Plateforme Web',
 			year: '2023',
-			description: "Plateforme digitale moderne avec système d'adhésion en ligne pour l'association des femmes du Ministère de l'Économie et des Finances",
+			description:
+				"Plateforme digitale moderne avec système d'adhésion en ligne pour l'association des femmes du Ministère de l'Économie et des Finances",
 			tags: ['Web App', 'Adhésion en ligne', 'Design institutionnel'],
 			heroColor: '#7B68EE',
 			image: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=1200&h=675&fit=crop',
@@ -82,7 +86,8 @@
 			client: 'Pierre-Christophe Gam',
 			category: 'Site Artistique',
 			year: '2023',
-			description: 'Expérience web immersive pour un projet artistique explorant les rêves et la Renaissance Africaine avec installation multimédia',
+			description:
+				'Expérience web immersive pour un projet artistique explorant les rêves et la Renaissance Africaine avec installation multimédia',
 			tags: ['Design immersif', 'Multimédia', 'Art digital'],
 			featured: true,
 			heroColor: '#9333EA',
@@ -100,7 +105,8 @@
 			client: 'Iwaria Platform',
 			category: 'Plateforme Web',
 			year: '2023',
-			description: "Conception de l'interface utilisateur pour une banque d'images africaines gratuites de haute qualité",
+			description:
+				"Conception de l'interface utilisateur pour une banque d'images africaines gratuites de haute qualité",
 			tags: ['UI Design', 'UX', 'Galerie', 'Responsive'],
 			heroColor: '#06B6D4',
 			image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=675&fit=crop',
@@ -116,7 +122,8 @@
 			client: 'Coris Bank',
 			category: 'Application Mobile',
 			year: '2022',
-			description: 'Conception UX/UI complète et prototype interactif pour une application de mobile banking aux standards internationaux',
+			description:
+				'Conception UX/UI complète et prototype interactif pour une application de mobile banking aux standards internationaux',
 			tags: ['Mobile', 'UX/UI', 'Prototype', 'Banking'],
 			heroColor: '#0EA5E9',
 			image: 'https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=1200&h=675&fit=crop',
@@ -129,7 +136,14 @@
 		}
 	];
 
-	const categories = ['Tous', 'Site Web', 'Site Institutionnel', 'Plateforme Web', 'Application Mobile', 'Site Artistique'];
+	const categories = [
+		'Tous',
+		'Site Web',
+		'Site Institutionnel',
+		'Plateforme Web',
+		'Application Mobile',
+		'Site Artistique'
+	];
 	let selectedCategory = 'Tous';
 
 	$: filteredProjects =
@@ -187,9 +201,10 @@
 			</div>
 			<div in:fly={{ y: 20, duration: 600, delay: 200 }}>
 				<Typography variant="body-large" className="text-noir/80">
-					Ce portfolio présente une sélection de projets qui illustrent notre capacité à transformer 
-					les visions de nos clients en réalités digitales performantes. Chaque projet témoigne de 
-					notre approche unique alliant créativité, expertise technique et compréhension profonde des enjeux locaux.
+					Ce portfolio présente une sélection de projets qui illustrent notre capacité à transformer
+					les visions de nos clients en réalités digitales performantes. Chaque projet témoigne de
+					notre approche unique alliant créativité, expertise technique et compréhension profonde
+					des enjeux locaux.
 				</Typography>
 			</div>
 		</div>
@@ -197,13 +212,13 @@
 </section>
 
 <!-- Filter Section - Hidden on mobile -->
-<section class="sticky top-16 z-20 bg-gris-clair py-8 hidden lg:block">
+<section class="sticky top-16 z-20 hidden bg-gris-clair py-8 lg:block">
 	<Container>
 		<div class="flex flex-wrap gap-4">
 			{#each categories as category}
 				<button
 					on:click={() => (selectedCategory = category)}
-					class="border-2 border-noir px-6 py-2 transition-all duration-300 rounded-full
+					class="rounded-full border-2 border-noir px-6 py-2 transition-all duration-300
 						{selectedCategory === category ? 'bg-noir text-blanc' : 'bg-blanc text-noir hover:bg-jaune'}"
 				>
 					<Typography variant="body" className="font-medium">
@@ -221,14 +236,14 @@
 		<Grid cols={2} gap="lg">
 			{#each filteredProjects as project, i}
 				<div
-					class="group overflow-hidden border-2 border-noir bg-blanc transition-all duration-300 hover:border-jaune rounded-2xl"
+					class="group overflow-hidden rounded-2xl border-2 border-noir bg-blanc transition-all duration-300 hover:border-jaune"
 					in:fadeScale={{ duration: 600, delay: 100 + i * 50 }}
 				>
 					<!-- Project Image -->
 					<div class="relative aspect-video overflow-hidden bg-gris-clair">
 						{#if project.image}
-							<img 
-								src={project.image} 
+							<img
+								src={project.image}
 								alt="{project.title} - {project.client}"
 								class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
 								loading="lazy"
@@ -276,7 +291,7 @@
 						<!-- Tags -->
 						<div class="mb-6 flex flex-wrap gap-2">
 							{#each project.tags as tag}
-								<span class="bg-gris-clair px-3 py-1 text-sm text-noir rounded-full">
+								<span class="rounded-full bg-gris-clair px-3 py-1 text-sm text-noir">
 									{tag}
 								</span>
 							{/each}
@@ -300,7 +315,7 @@
 <section class="bg-noir py-24 text-blanc">
 	<Container>
 		<div class="mx-auto max-w-4xl text-center">
-			<Typography variant="h2" className="mb-4 font-display uppercase">
+			<Typography variant="h2" className="mb-4 font-display">
 				Vous avez un projet en tête ?
 			</Typography>
 			<Typography variant="body-large" className="mb-8 text-blanc/80">

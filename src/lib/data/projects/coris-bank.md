@@ -16,6 +16,7 @@ Coris Bank, établissement bancaire nouvellement installé, cherchait à se dém
 ## Le Défi
 
 Concevoir une application qui:
+
 - Rivalise avec les meilleures apps bancaires internationales
 - Simplifie les opérations bancaires complexes
 - Inspire confiance et sécurité
@@ -60,6 +61,7 @@ En collaboration avec une équipe de développement, nous avons conçu et protot
 ## Résultat du Projet
 
 Bien que ce projet n'ait finalement pas vu le jour en production, nous avons livré:
+
 - Un prototype interactif complet et fonctionnel
 - Une interface utilisateur moderne et intuitive
 - Une expérience bancaire mobile aux standards internationaux
@@ -69,6 +71,7 @@ Bien que ce projet n'ait finalement pas vu le jour en production, nous avons liv
 ## Apprentissages
 
 Ce projet nous a permis de:
+
 - Maîtriser les complexités du design d'applications bancaires
 - Développer une expertise en prototypage haute fidélité
 - Comprendre les enjeux sécuritaires du mobile banking
