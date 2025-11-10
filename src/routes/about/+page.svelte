@@ -1,69 +1,50 @@
 <script>
-	import Container from '$lib/components/atoms/Container.svelte';
-	import Typography from '$lib/components/atoms/Typography.svelte';
-	import Button from '$lib/components/atoms/Button.svelte';
-	import Grid from '$lib/components/atoms/Grid.svelte';
-	import { fly, fadeScale } from '$lib/utils/transitions';
+	import { fly } from '$lib/utils/transitions';
+	import ProcessSteps from '$lib/components/organisms/ProcessSteps.svelte';
 
-	const content = {
-		about: {
-			title: 'À propos',
-			headline: "Nous sommes le partenaire tech qui comprend vraiment l'Afrique",
-			intro:
-				'Le Labo Jaune est une agence tech et design basée à Cotonou, au Bénin. Nous accompagnons les entreprises, notamment africaines, dans leur croissance à travers des solutions technologiques adaptées. Notre approche sur-mesure est centrée sur les besoins réels du client.',
-			mission: {
-				title: 'Notre Mission',
-				headline: "Accompagner les entreprises africaines vers l'excellence digitale",
-				description:
-					"Notre mission est d'offrir un accompagnement humain, rigoureux et créatif aux entreprises africaines pour les aider à bâtir des produits durables, pertinents et bien pensés."
-			},
-			values: [
-				{
-					title: '🎯 Effectivité',
-					description:
-						'Nous créons des solutions qui fonctionnent réellement, avec des fonctionnalités concrètes qui répondent aux besoins spécifiques de nos clients.'
-				},
-				{
-					title: '💼 Professionnalisme',
-					description:
-						'Nous maintenons les plus hauts standards de qualité dans notre travail, avec une approche rigoureuse et une attention aux détails qui inspire confiance.'
-				},
-				{
-					title: '✨ Originalité',
-					description:
-						'Nous apportons une touche créative unique à chaque projet, en identifiant les solutions les plus simples, efficaces et durables pour votre contexte.'
-				}
-			]
+	let expandedValue = $state(null);
+
+	function toggleValue(index) {
+		expandedValue = expandedValue === index ? null : index;
+	}
+
+	const workProcess = [
+		{
+			title: 'Diagnostic & Écoute',
+			description:
+				"Nous commençons par une analyse approfondie de votre écosystème digital, vos défis business et vos objectifs. Cette phase de découverte nous permet de comprendre vos besoins réels et d'identifier les opportunités d'amélioration.",
+			icon: 'search'
 		},
-		team: {
-			title: 'Notre Équipe',
-			headline: 'Des experts passionnés qui transforment vos défis en opportunités',
-			intro: 'Une équipe passionnée qui prend le temps de comprendre votre contexte et vos enjeux',
-			members: [
-				{
-					name: 'Ralph Gnonlonfoun',
-					position: 'Co-Fondateur, Product Designer & Développeur Senior',
-					bio: "Fort de 10 années d'expérience dans la tech internationale, Ralph a forgé son expertise au sein de l'agence Atelier Paon puis de la startup américaine Beans. Spécialiste des plateformes à fort impact social, il porte une vision ambitieuse : créer des expériences digitales qui transforment l'Afrique."
-				},
-				{
-					name: 'Audrey Avocegamou',
-					position: 'Co-Fondatrice, Directrice de Projets & Développement',
-					bio: "Parcours marqué par une riche expérience dans la gestion de projets internationaux, notamment à l'Ambassade de France à Malabo. Son passage en tant que collaboratrice à la Fondation BOA au Maroc lui confère une compréhension unique des enjeux. Expertise pointue dans le montage de partenariats pour des projets communautaires."
-				}
-			]
+		{
+			title: 'Stratégie & Conception',
+			description:
+				"Nous élaborons une stratégie sur-mesure et concevons l'architecture de votre solution. Notre approche combine design thinking, UX research et expertise technique pour créer une feuille de route claire et actionnable.",
+			icon: 'compass'
+		},
+		{
+			title: 'Développement Agile',
+			description:
+				"Nous développons votre solution de manière itérative, avec des points de contrôle réguliers. Cette approche agile permet d'ajuster le cap si nécessaire et de garantir que le produit final correspond exactement à vos attentes.",
+			icon: 'zap'
+		},
+		{
+			title: 'Lancement & Accompagnement',
+			description:
+				"Nous assurons un déploiement sans accroc de votre solution et restons à vos côtés pour garantir son succès. Notre accompagnement post-lancement inclut formation, maintenance et optimisations continues.",
+			icon: 'rocket'
 		}
-	};
+	];
 </script>
 
 <svelte:head>
 	<title>À propos - Le Labo Jaune | Agence tech et design à Cotonou</title>
 	<meta
 		name="description"
-		content="Découvrez Le Labo Jaune, agence tech et design basée à Cotonou, Bénin. Nous accompagnons les entreprises africaines dans leur croissance avec des solutions technologiques sur-mesure."
+		content="Découvrez Le Labo Jaune, agence tech et design basée à Cotonou, Bénin. Nous accompagnons les entreprises dans leur croissance avec des solutions technologiques sur-mesure."
 	/>
 	<meta
 		name="keywords"
-		content="à propos, agence digitale africaine, équipe créative, innovation digitale, mission, valeurs, culture d'entreprise"
+		content="à propos, agence digitale, équipe créative, innovation digitale, mission, valeurs, culture d'entreprise"
 	/>
 
 	<!-- Open Graph / Facebook -->
@@ -72,7 +53,7 @@
 	<meta property="og:title" content="À propos - Le Labo Jaune | Agence tech et design à Cotonou" />
 	<meta
 		property="og:description"
-		content="Découvrez Le Labo Jaune, agence tech et design basée à Cotonou, Bénin. Nous accompagnons les entreprises africaines avec des solutions sur-mesure."
+		content="Découvrez Le Labo Jaune, agence tech et design basée à Cotonou, Bénin. Nous accompagnons les entreprises avec des solutions sur-mesure."
 	/>
 	<meta property="og:image" content="https://labojaune.com/og-image.jpg" />
 
@@ -94,178 +75,189 @@
 </svelte:head>
 
 <!-- Hero Section -->
-<section class="pb-16 pt-32">
-	<Container>
-		<div class="max-w-4xl">
+<section class="bg-jaune pb-32 pt-40">
+	<div class="container mx-auto px-6">
+		<div class="mx-auto max-w-4xl">
 			<div in:fly={{ y: 20, duration: 600, delay: 100 }}>
-				<Typography variant="overline" className="mb-2 text-jaune font-mono">
-					{content.about.title}
-				</Typography>
-				<Typography variant="h1" className="mb-6 font-display">
-					{content.about.headline}
-				</Typography>
+				<h1 class="mb-6 font-display text-5xl font-bold leading-tight md:text-6xl">
+					Nous créons des expériences digitales qui transforment les entreprises.
+				</h1>
 			</div>
 			<div in:fly={{ y: 20, duration: 600, delay: 200 }}>
-				<Typography variant="body-large" className="text-noir/80">
-					{content.about.intro}
-				</Typography>
+				<p class="text-xl text-noir/60 md:text-2xl">
+					Nous mettons les gens en premier — nos clients, nos employés et les utilisateurs que
+					nous servons.
+				</p>
 			</div>
 		</div>
-	</Container>
+	</div>
 </section>
 
 <!-- Mission Section -->
-<section class="bg-gris-clair py-16">
-	<Container>
-		<div class="mx-auto max-w-4xl text-center">
-			<Typography variant="overline" className="mb-2 text-jaune font-mono">
-				{content.about.mission.title}
-			</Typography>
-			<Typography variant="h2" className="mb-8 font-display">
-				{content.about.mission.headline}
-			</Typography>
-			<Typography variant="body-large" className="text-noir/80">
-				{content.about.mission.description}
-			</Typography>
+<section class="border-t border-noir/10 bg-white py-24">
+	<div class="container mx-auto px-6">
+		<div class="mx-auto max-w-4xl">
+			<div in:fly={{ y: 20, duration: 600, delay: 100 }}>
+				<h2 class="mb-8 font-display text-4xl font-bold leading-tight md:text-5xl">
+					Notre mission : transformer les défis business en opportunités digitales
+				</h2>
+			</div>
+			<div in:fly={{ y: 20, duration: 600, delay: 200 }}>
+				<p class="text-xl text-noir/60 md:text-2xl">
+					Au Labo Jaune, nous adoptons une approche diagnostique rigoureuse. Comme un médecin
+					examine son patient avant de prescrire un traitement, nous analysons en profondeur votre
+					écosystème numérique, vos défis business et vos objectifs avant de concevoir la solution
+					sur-mesure adaptée à vos besoins.
+				</p>
+			</div>
 		</div>
-	</Container>
+	</div>
 </section>
 
 <!-- Values Section -->
-<section class="py-24">
-	<Container>
-		<Typography variant="h2" className="mb-16 font-display text-center">Nos Valeurs</Typography>
-		<Grid cols={3} gap="lg">
-			{#each content.about.values as value, i}
+<section class="border-t border-noir/10 bg-white py-24">
+	<div class="container mx-auto px-6">
+		<div class="mx-auto max-w-4xl">
+			<div class="mb-16">
+				<h2 class="font-display text-4xl font-bold leading-tight md:text-5xl">
+					Nos valeurs font partie de tout ce que nous créons.
+				</h2>
+			</div>
+
+			<div class="space-y-1">
+				<!-- Value 1: Effectivité -->
 				<div
-					class="border-2 border-noir bg-blanc p-8 transition-all duration-300 hover:bg-jaune"
-					in:fadeScale={{ duration: 600, delay: 100 + i * 100 }}
+					class="border-t border-noir/10 transition-all duration-300"
+					in:fly={{ y: 20, duration: 600, delay: 100 }}
 				>
-					<Typography variant="h3" className="mb-4 font-bold">
-						{value.title}
-					</Typography>
-					<Typography variant="body" className="text-noir/80">
-						{value.description}
-					</Typography>
+					<button
+						class="flex w-full items-start justify-between gap-6 py-8 text-left"
+						onclick={() => toggleValue(0)}
+					>
+						<div class="flex-1">
+							<h3 class="mb-2 text-2xl font-bold">Effectivité</h3>
+							<p class="text-lg text-noir/60">
+								Nous créons des solutions qui fonctionnent réellement, avec des fonctionnalités
+								concrètes qui répondent aux besoins spécifiques de nos clients.
+							</p>
+						</div>
+						<div
+							class="text-xl font-light transition-transform duration-300"
+							style="transform: rotate({expandedValue === 0 ? '45deg' : '0deg'})"
+						>
+							+
+						</div>
+					</button>
+
+					{#if expandedValue === 0}
+						<div class="pb-8" in:fly={{ y: -10, duration: 300 }}>
+							<p class="text-lg text-noir/60">
+								L'effectivité guide toutes nos décisions. Nous privilégions les solutions
+								pragmatiques qui génèrent des résultats tangibles plutôt que des technologies à la
+								mode sans valeur ajoutée réelle.
+							</p>
+						</div>
+					{/if}
 				</div>
-			{/each}
-		</Grid>
-	</Container>
+
+				<!-- Value 2: Professionnalisme -->
+				<div
+					class="border-t border-noir/10 transition-all duration-300"
+					in:fly={{ y: 20, duration: 600, delay: 150 }}
+				>
+					<button
+						class="flex w-full items-start justify-between gap-6 py-8 text-left"
+						onclick={() => toggleValue(1)}
+					>
+						<div class="flex-1">
+							<h3 class="mb-2 text-2xl font-bold">Professionnalisme</h3>
+							<p class="text-lg text-noir/60">
+								Nous maintenons les plus hauts standards de qualité dans notre travail, avec une
+								approche rigoureuse et une attention aux détails qui inspire confiance.
+							</p>
+						</div>
+						<div
+							class="text-xl font-light transition-transform duration-300"
+							style="transform: rotate({expandedValue === 1 ? '45deg' : '0deg'})"
+						>
+							+
+						</div>
+					</button>
+
+					{#if expandedValue === 1}
+						<div class="pb-8" in:fly={{ y: -10, duration: 300 }}>
+							<p class="text-lg text-noir/60">
+								Le professionnalisme se manifeste dans notre rigueur méthodologique, notre respect
+								des délais et notre communication claire à chaque étape du projet.
+							</p>
+						</div>
+					{/if}
+				</div>
+
+				<!-- Value 3: Originalité -->
+				<div
+					class="border-t border-noir/10 transition-all duration-300"
+					in:fly={{ y: 20, duration: 600, delay: 200 }}
+				>
+					<button
+						class="flex w-full items-start justify-between gap-6 py-8 text-left"
+						onclick={() => toggleValue(2)}
+					>
+						<div class="flex-1">
+							<h3 class="mb-2 text-2xl font-bold">Originalité</h3>
+							<p class="text-lg text-noir/60">
+								Nous apportons une touche créative unique à chaque projet, en identifiant les
+								solutions les plus simples, efficaces et durables pour votre contexte.
+							</p>
+						</div>
+						<div
+							class="text-xl font-light transition-transform duration-300"
+							style="transform: rotate({expandedValue === 2 ? '45deg' : '0deg'})"
+						>
+							+
+						</div>
+					</button>
+
+					{#if expandedValue === 2}
+						<div class="pb-8" in:fly={{ y: -10, duration: 300 }}>
+							<p class="text-lg text-noir/60">
+								Notre originalité réside dans notre capacité à penser différemment, à challenger
+								les conventions tout en restant ancré dans les réalités du marché africain.
+							</p>
+						</div>
+					{/if}
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
+
+<!-- Process Section -->
+<ProcessSteps steps={workProcess} title="Notre processus de travail" />
 
 <!-- Team Section -->
-<section class="bg-noir py-24 text-blanc">
-	<Container>
-		<div class="mb-16 text-center">
-			<Typography variant="overline" className="mb-2 text-jaune font-mono">
-				{content.team.title}
-			</Typography>
-			<Typography variant="h2" className="mb-4 font-display text-blanc">
-				{content.team.headline}
-			</Typography>
-			<Typography variant="body-large" className="text-blanc/80 max-w-2xl mx-auto">
-				{content.team.intro}
-			</Typography>
-		</div>
-
-		<Grid cols={2} gap="lg" className="max-w-4xl mx-auto">
-			{#each content.team.members as member, i}
-				<div class="text-center" in:fly={{ y: 20, duration: 600, delay: 100 + i * 100 }}>
-					<div class="mb-6 aspect-square bg-jaune"></div>
-					<Typography variant="h4" className="mb-2 font-bold">
-						{member.name}
-					</Typography>
-					<Typography variant="body-small" className="mb-4 text-jaune">
-						{member.position}
-					</Typography>
-					<Typography variant="body-small" className="text-blanc/70">
-						{member.bio}
-					</Typography>
-				</div>
-			{/each}
-		</Grid>
-	</Container>
-</section>
-
-<!-- Culture Section -->
-<section class="py-24">
-	<Container>
+<section class="border-t border-noir/10 bg-white py-32">
+	<div class="container mx-auto px-6">
 		<div class="mx-auto max-w-4xl">
-			<Typography variant="h2" className="mb-8 font-display text-center">Notre Culture</Typography>
-			<div class="border-2 border-noir bg-jaune p-12">
-				<Typography variant="h3" className="mb-6 font-serif italic">
-					"Comme un médecin qui diagnostique avant de prescrire"
-				</Typography>
-				<Typography variant="body-large" className="text-noir/80">
-					Au Labo Jaune, nous adoptons une approche diagnostique rigoureuse. Comme un médecin
-					examine son patient avant de prescrire un traitement, nous analysons en profondeur votre
-					écosystème numérique, vos symptômes business et vos objectifs de santé digitale. Ce n'est
-					qu'après ce diagnostic complet que nous concevons la solution sur-mesure qui guérira vos
-					défis et préviendra les complications futures.
-				</Typography>
+			<div class="mb-12">
+				<h2 class="font-display text-4xl font-bold leading-tight md:text-5xl">
+					Une équipe soudée et passionnée
+				</h2>
+			</div>
+
+			<div in:fly={{ y: 20, duration: 600, delay: 100 }}>
+				<p class="mb-6 text-xl text-noir/60 md:text-2xl">
+					Le Labo Jaune réunit une équipe pluridisciplinaire de talents passionnés par
+					l'innovation digitale. Designers, développeurs, stratèges et chefs de projets
+					travaillent ensemble pour offrir des solutions qui dépassent les attentes.
+				</p>
+				<p class="text-xl text-noir/60 md:text-2xl">
+					Notre force réside dans notre diversité de compétences et notre approche
+					collaborative. Chaque membre apporte son expertise unique pour créer des
+					expériences digitales exceptionnelles, adaptées au contexte africain.
+				</p>
 			</div>
 		</div>
-	</Container>
+	</div>
 </section>
 
-<!-- Collaboration Section -->
-<section class="bg-blanc py-24">
-	<Container>
-		<div class="mx-auto max-w-4xl">
-			<Typography variant="h2" className="mb-8 font-display text-center">
-				Notre Réseau de Collaboration
-			</Typography>
-			<Typography variant="body-large" className="mb-12 text-center text-noir/80">
-				Le Labo Jaune travaille avec un réseau d'experts indépendants dans des domaines
-				complémentaires pour offrir des solutions complètes et adaptées.
-			</Typography>
-			<Grid cols={3} gap="lg" className="max-w-3xl mx-auto">
-				<div
-					class="rounded-2xl border-2 border-noir bg-gris-clair p-6 text-center transition-all duration-300 hover:bg-jaune"
-					in:fadeScale={{ duration: 600, delay: 100 }}
-				>
-					<Typography variant="h4" className="mb-3 font-bold">🔍 SEO</Typography>
-					<Typography variant="body" className="text-noir/70">
-						Experts en référencement pour maximiser votre visibilité en ligne
-					</Typography>
-				</div>
-				<div
-					class="rounded-2xl border-2 border-noir bg-gris-clair p-6 text-center transition-all duration-300 hover:bg-jaune"
-					in:fadeScale={{ duration: 600, delay: 200 }}
-				>
-					<Typography variant="h4" className="mb-3 font-bold">📢 Marketing</Typography>
-					<Typography variant="body" className="text-noir/70">
-						Spécialistes en stratégies marketing adaptées au marché africain
-					</Typography>
-				</div>
-				<div
-					class="rounded-2xl border-2 border-noir bg-gris-clair p-6 text-center transition-all duration-300 hover:bg-jaune"
-					in:fadeScale={{ duration: 600, delay: 300 }}
-				>
-					<Typography variant="h4" className="mb-3 font-bold">🎨 Design Spécialisé</Typography>
-					<Typography variant="body" className="text-noir/70">
-						Designers créatifs pour des projets nécessitant une expertise particulière
-					</Typography>
-				</div>
-			</Grid>
-		</div>
-	</Container>
-</section>
-
-<!-- CTA Section -->
-<section class="bg-gris-clair py-24">
-	<Container>
-		<div class="text-center">
-			<Typography variant="h2" className="mb-4 font-display">
-				Prêt à travailler ensemble ?
-			</Typography>
-			<Typography variant="body-large" className="mb-8 text-noir/80 max-w-2xl mx-auto">
-				Découvrez comment nous pouvons transformer votre vision en réalité digitale.
-			</Typography>
-			<div class="flex justify-center gap-4">
-				<Button href="/contact" size="large">Démarrer un projet</Button>
-				<Button href="/services" variant="secondary" size="large">Découvrir nos services</Button>
-			</div>
-		</div>
-	</Container>
-</section>

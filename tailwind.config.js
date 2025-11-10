@@ -11,12 +11,13 @@ export default {
 				'gris-fonce': '#1A1A1A',
 				'gris-moyen': '#666666',
 				'gris-clair': '#F5F5F5',
+				'gris-darker': '#E5E5E5',
 				'blanc-casse': '#FFFEF5'
 			},
 			fontFamily: {
-				sans: ['Space Grotesk', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-				display: ['Literata', 'Georgia', 'serif'],
-				serif: ['Playfair Display', 'Georgia', 'serif'],
+				sans: ['Instrument Sans', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+				serif: ['Instrument Serif', 'Georgia', 'serif'],
+				display: ['Instrument Serif', 'Georgia', 'serif'],
 				mono: ['JetBrains Mono', 'Courier New', 'monospace']
 			},
 			fontSize: {

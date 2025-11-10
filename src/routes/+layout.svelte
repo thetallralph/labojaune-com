@@ -2,6 +2,7 @@
 	import '../app.css';
 	import Navigation from '$lib/components/organisms/Navigation.svelte';
 	import Footer from '$lib/components/organisms/Footer.svelte';
+	import FAQSection from '$lib/components/organisms/FAQSection.svelte';
 	import SchemaMarkup from '$lib/components/molecules/SchemaMarkup.svelte';
 	import { page } from '$app/stores';
 	import { fade } from '$lib/utils/transitions';
@@ -32,5 +33,9 @@
 		{/key}
 	</main>
 
+	<!-- Universal FAQ section for all pages -->
+	<FAQSection />
+
+	<!-- Universal footer for all pages -->
 	<Footer />
 </div>

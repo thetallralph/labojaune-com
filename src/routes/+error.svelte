@@ -42,12 +42,9 @@
 				{#if is404}
 					<div class="pt-4">
 						<Typography variant="small" class="text-gray-500">
-							Vous pouvez également explorer nos <a
-								href="/services"
-								class="text-jaune hover:underline">services</a
-							>
-							ou consulter notre
-							<a href="/portfolio" class="text-jaune hover:underline">portfolio</a>.
+							Vous pouvez également consulter nos
+							<a href="/projects" class="text-jaune hover:underline">projets</a>
+							ou en savoir plus <a href="/about" class="text-jaune hover:underline">à propos de nous</a>.
 						</Typography>
 					</div>
 				{/if}
