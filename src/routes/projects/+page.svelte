@@ -22,12 +22,6 @@
 			image: '/images/projects/le-belier.jpg'
 		},
 		{
-			id: 'afmef',
-			title: "Plateforme digitale moderne avec système d'adhésion en ligne",
-			category: 'Plateforme Web',
-			image: '/images/projects/afmef.jpg'
-		},
-		{
 			id: 'toguna-world',
 			title: 'Expérience web immersive explorant les rêves et la Renaissance Africaine',
 			category: 'Site Artistique',

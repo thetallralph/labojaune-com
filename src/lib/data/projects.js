@@ -147,41 +147,6 @@ export const projectsData = {
 			author: "Direction de l'Agence Le Bélier"
 		}
 	},
-	afmef: {
-		id: 'afmef',
-		title: 'AFMEF',
-		client: "Association des Femmes du Ministère de l'Économie et des Finances",
-		category: 'Plateforme Web',
-		year: 2023,
-		image: '/images/projects/afmef.jpg',
-		website: 'https://afmef.org',
-		heroColor: '#553C9A',
-		tagline: 'Empowering les femmes du ministère des Finances',
-		description: "Plateforme digitale moderne avec système d'adhésion en ligne pour l'association",
-		challenge:
-			"L'AFMEF cherchait à moderniser sa communication avec les membres, simplifier le processus d'adhésion, communiquer clairement ses 7 objectifs stratégiques et créer un hub central pour ses activités.",
-		solution:
-			"Nous avons développé une plateforme digitale moderne qui sert de centre névralgique pour toutes les activités de l'association.",
-		features: [
-			"Système d'adhésion en ligne simplifié et sécurisé",
-			'Architecture claire des 7 objectifs avec carrousel',
-			'Design institutionnel élégant avec mentions légales',
-			'Bandeau animé avec messages inspirants',
-			'Iconographie personnalisée pour chaque objectif'
-		],
-		results: {
-			members: '+400 nouvelles adhésions en 8 mois',
-			objectives: '7 objectifs clairement communiqués',
-			mobile: '90% de trafic mobile optimisé',
-			events: '15 événements organisés',
-			satisfaction: '85% de satisfaction membres'
-		},
-		testimonial: {
-			quote:
-				"La plateforme digitale créée par Labo Jaune a révolutionné notre façon de communiquer avec nos membres. L'augmentation spectaculaire des adhésions témoigne de son efficacité.",
-			author: "Bureau exécutif de l'AFMEF"
-		}
-	},
 	'toguna-world': {
 		id: 'toguna-world',
 		title: 'Toguna World',
