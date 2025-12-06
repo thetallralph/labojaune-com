@@ -6,6 +6,7 @@ export const projectsData = {
 		category: 'Site Web',
 		year: 2024,
 		image: '/images/projects/aidjedo.jpg',
+		website: 'https://aidjedo.org',
 		featured: true,
 		heroColor: '#2C5282',
 		tagline: 'Transformer la solidarité en action digitale',
@@ -41,6 +42,7 @@ export const projectsData = {
 		category: 'Site Institutionnel',
 		year: 2024,
 		image: '/images/projects/fdfa.jpg',
+		website: 'https://fondationfdfa.org',
 		featured: true,
 		heroColor: '#22543D',
 		tagline: "Valoriser l'économie du football africain",
@@ -71,31 +73,77 @@ export const projectsData = {
 		category: 'Site Web',
 		year: 2024,
 		image: '/images/projects/le-belier.jpg',
+		website: 'https://agencelebelier.com',
 		featured: true,
 		heroColor: '#744210',
 		tagline: "L'excellence du tourisme béninois en ligne",
 		description:
 			'Site web intégrant tourisme, hôtellerie et restauration avec système de réservation en ligne',
+		intro:
+			"L'Agence Le Bélier, basée à Natitingou au cœur de l'Atacora, est bien plus qu'une simple agence de voyage. C'est une entreprise familiale passionnée qui fait découvrir les trésors cachés du Bénin depuis des années. Reconnue sur TripAdvisor, Le Routard, Evaneos et Petit Futé, elle incarne l'excellence de l'hospitalité béninoise.",
 		challenge:
-			"L'agence avait besoin d'une plateforme unifiée pour intégrer trois activités distinctes (tourisme, hôtellerie, restauration), faciliter les réservations en ligne, renforcer sa crédibilité internationale et améliorer l'engagement client.",
+			"Lors de notre première rencontre avec l'équipe de l'Agence Le Bélier, nous avons identifié un défi majeur : comment unifier trois activités distinctes (tourisme, hôtellerie et restauration) dans une présence digitale cohérente qui reflète leur excellence sur le terrain ? Le site existant ne permettait pas de réservations en ligne, forçant les clients potentiels à passer par des appels téléphoniques souvent compliqués depuis l'étranger. De plus, malgré leur excellente réputation sur les plateformes de voyage, cette crédibilité n'était pas visible sur leur propre site.",
+		approach: [
+			{
+				title: 'Immersion & Découverte',
+				description:
+					"Nous avons commencé par comprendre en profondeur l'univers de l'Agence Le Bélier. Quels sont leurs circuits phares ? Qu'est-ce qui rend leur hôtel unique ? Pourquoi les voyageurs reviennent-ils année après année ? Cette phase d'écoute nous a permis d'identifier les éléments clés à mettre en valeur."
+			},
+			{
+				title: 'Architecture de l\'Information',
+				description:
+					"Nous avons conçu une structure claire qui guide naturellement le visiteur : des circuits touristiques captivants aux chambres confortables de l'hôtel, en passant par les saveurs du restaurant Sympa la Vie. Chaque section raconte une partie de l'histoire."
+			},
+			{
+				title: 'Design Immersif',
+				description:
+					"L'identité visuelle s'inspire des paysages de l'Atacora et de la richesse culturelle béninoise. Les grandes images des Tata Somba, des éléphants du parc de la Pendjari et des sourires chaleureux transportent le visiteur avant même son arrivée."
+			},
+			{
+				title: 'Conversion & Engagement',
+				description:
+					"Nous avons intégré un système de réservation fluide, un widget WhatsApp pour une assistance immédiate, et mis en avant les avis authentiques des voyageurs. Chaque élément est pensé pour transformer l'intérêt en réservation."
+			}
+		],
 		solution:
-			"Nous avons créé un site web complet qui présente harmonieusement les trois branches d'activité dans une expérience utilisateur cohérente et engageante.",
+			"Le résultat est une plateforme digitale qui capture l'essence de l'expérience Le Bélier. Dès la page d'accueil, le visiteur est accueilli par les paysages majestueux du nord Bénin. La navigation intuitive permet d'explorer les 4 circuits signature, de découvrir les chambres de l'hôtel niché au pied des montagnes, et de s'imaginer déguster la cuisine africaine et européenne du restaurant.",
 		features: [
-			'Présentation détaillée de 4 circuits touristiques',
-			'Système de réservation en ligne intégré',
-			'Widget WhatsApp pour assistance immédiate',
-			'Intégration TripAdvisor, Routard, Evaneos, Petit Futé',
-			'Témoignages authentiques avec notations 5 étoiles'
+			'4 circuits touristiques détaillés avec itinéraires jour par jour',
+			'Présentation immersive de l\'hôtel avec galerie photos',
+			'Menu du restaurant Sympa la Vie avec spécialités locales',
+			'Système de réservation en ligne intégré (Tally)',
+			'Widget WhatsApp pour assistance en temps réel',
+			'Intégration des badges TripAdvisor, Routard, Evaneos, Petit Futé',
+			'Témoignages clients authentiques avec notes 5 étoiles',
+			'Site bilingue français/anglais pour clientèle internationale'
+		],
+		gallery: [
+			{
+				image: '/images/projects/le-belier/hero.jpg',
+				caption: 'Page d\'accueil avec mise en avant des circuits'
+			},
+			{
+				image: '/images/projects/le-belier/tourisme.jpg',
+				caption: 'Section tourisme présentant les 4 circuits signature'
+			},
+			{
+				image: '/images/projects/le-belier/hotel.jpg',
+				caption: 'Présentation de l\'hôtel au pied des montagnes'
+			},
+			{
+				image: '/images/projects/le-belier/restaurant.jpg',
+				caption: 'Restaurant Sympa la Vie - cuisine africaine et européenne'
+			}
 		],
 		results: {
 			bookings: '+110% de réservations en ligne',
 			rating: '4.8/5 sur TripAdvisor',
-			countries: '24 nationalités touchées',
-			engagement: '+150% via WhatsApp'
+			countries: '24 nationalités de clients',
+			engagement: '+150% d\'engagement WhatsApp'
 		},
 		testimonial: {
 			quote:
-				"Notre nouveau site web a transformé notre activité. Les réservations en ligne ont explosé et nous touchons maintenant une clientèle internationale que nous n'aurions jamais pu atteindre autrement.",
+				"Notre nouveau site web a transformé notre activité. Les réservations en ligne ont explosé et nous touchons maintenant une clientèle internationale que nous n'aurions jamais pu atteindre autrement. Labo Jaune a vraiment compris notre vision et l'a traduite en une expérience digitale qui nous ressemble.",
 			author: "Direction de l'Agence Le Bélier"
 		}
 	},
@@ -106,6 +154,7 @@ export const projectsData = {
 		category: 'Plateforme Web',
 		year: 2023,
 		image: '/images/projects/afmef.jpg',
+		website: 'https://afmef.org',
 		heroColor: '#553C9A',
 		tagline: 'Empowering les femmes du ministère des Finances',
 		description: "Plateforme digitale moderne avec système d'adhésion en ligne pour l'association",
@@ -140,6 +189,7 @@ export const projectsData = {
 		category: 'Site Artistique',
 		year: 2023,
 		image: '/images/projects/toguna-world.jpg',
+		website: 'https://togunaworld.com',
 		featured: true,
 		heroColor: '#1A202C',
 		tagline: "L'art digital au service de la Renaissance Africaine",
@@ -181,6 +231,7 @@ export const projectsData = {
 		category: 'Plateforme Web',
 		year: 2023,
 		image: '/images/projects/iwaria.jpg',
+		website: 'https://iwaria.com',
 		heroColor: '#B91C1C',
 		tagline: "La banque d'images qui célèbre l'Afrique",
 		description:
@@ -207,36 +258,5 @@ export const projectsData = {
 				"L'interface créée par Labo Jaune a transformé notre vision en réalité. La simplicité du design permet à nos photos de briller tout en offrant une expérience de navigation exceptionnelle.",
 			author: 'Équipe Iwaria'
 		}
-	},
-	'coris-bank': {
-		id: 'coris-bank',
-		title: 'Coris Bank Mobile',
-		client: 'Coris Bank',
-		category: 'Application Mobile',
-		year: 2022,
-		image: '/images/projects/coris-bank.jpg',
-		heroColor: '#065F46',
-		tagline: 'Application mobile banking nouvelle génération',
-		description:
-			'Conception UX/UI complète et prototype interactif pour une application de mobile banking',
-		challenge:
-			'Concevoir une application qui rivalise avec les meilleures apps bancaires internationales, simplifie les opérations bancaires complexes, inspire confiance et sécurité, et attire une clientèle jeune et tech-savvy.',
-		solution:
-			"En collaboration avec une équipe de développement, nous avons conçu et prototypé une application mobile banking complète qui révolutionne l'expérience utilisateur bancaire.",
-		features: [
-			'Design complet de plus de 50 écrans',
-			'Prototype interactif haute fidélité',
-			"Flux d'authentification biométrique",
-			'Design system complet pour développeurs',
-			'Standards bancaires internationaux'
-		],
-		deliverables: [
-			'Prototype interactif complet et fonctionnel',
-			'Interface utilisateur moderne et intuitive',
-			'Expérience bancaire aux standards internationaux',
-			'Design sécurisé inspirant confiance',
-			'Architecture technique solide et évolutive'
-		],
-		note: "Bien que ce projet n'ait finalement pas vu le jour en production, le prototype développé reste une démonstration de notre capacité à créer des solutions bancaires digitales de classe mondiale."
 	}
 };

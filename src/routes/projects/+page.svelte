@@ -7,43 +7,37 @@
 			id: 'aidjedo',
 			title: 'Plateforme complète avec système de dons en ligne et espace membre',
 			category: 'Site Web',
-			image: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1200&h=675&fit=crop'
+			image: '/images/projects/aidjedo.jpg'
 		},
 		{
 			id: 'fdfa',
 			title: 'Plateforme institutionnelle positionnant la FDFA comme acteur majeur du football africain',
 			category: 'Site Institutionnel',
-			image: 'https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=1200&h=675&fit=crop'
+			image: '/images/projects/fdfa.jpg'
 		},
 		{
 			id: 'le-belier',
 			title: 'Site web intégrant tourisme, hôtellerie et restauration avec réservation en ligne',
 			category: 'Site Web',
-			image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&h=675&fit=crop'
+			image: '/images/projects/le-belier.jpg'
 		},
 		{
 			id: 'afmef',
 			title: "Plateforme digitale moderne avec système d'adhésion en ligne",
 			category: 'Plateforme Web',
-			image: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=1200&h=675&fit=crop'
+			image: '/images/projects/afmef.jpg'
 		},
 		{
 			id: 'toguna-world',
 			title: 'Expérience web immersive explorant les rêves et la Renaissance Africaine',
 			category: 'Site Artistique',
-			image: 'https://images.unsplash.com/photo-1559028012-481c04fa702d?w=1200&h=675&fit=crop'
+			image: '/images/projects/toguna-world.jpg'
 		},
 		{
 			id: 'iwaria',
 			title: "Interface utilisateur pour une banque d'images africaines gratuites",
 			category: 'UI Design',
-			image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=675&fit=crop'
-		},
-		{
-			id: 'coris-bank',
-			title: 'Conception UX/UI complète et prototype interactif pour une application de mobile banking',
-			category: 'Application Mobile',
-			image: 'https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=1200&h=675&fit=crop'
+			image: '/images/projects/iwaria.jpg'
 		}
 	];
 
