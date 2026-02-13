@@ -73,7 +73,7 @@ export const projectsData = {
 		category: 'Site Web',
 		year: 2024,
 		image: '/images/projects/le-belier.jpg',
-		website: 'https://agencelebelier.com',
+		website: 'https://complexelebelier.com',
 		featured: true,
 		heroColor: '#744210',
 		tagline: "L'excellence du tourisme béninois en ligne",
