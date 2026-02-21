@@ -169,8 +169,8 @@
 </svelte:head>
 
 <!-- Hero Section -->
-<section class="flex min-h-screen items-center justify-center">
-	<div class="container mx-auto px-6">
+<section class="flex min-h-screen flex-col pt-20">
+	<div class="container mx-auto flex flex-1 items-center justify-center px-6">
 		<div class="mx-auto max-w-4xl text-center">
 			<div in:fly={{ y: 20, duration: 600, delay: 100 }}>
 				<h1 class="mb-6 font-display text-6xl font-bold leading-tight md:text-7xl">
@@ -207,8 +207,8 @@
 		</div>
 	</div>
 
-	<!-- Clients Section - Fixed at bottom -->
-	<div class="absolute bottom-0 left-1/2 w-full max-w-5xl -translate-x-1/2 border-t border-noir/10 py-8">
+	<!-- Clients Section -->
+	<div class="mx-auto w-full max-w-5xl border-t border-noir/10 py-8">
 		<div class="px-6">
 			<div class="mb-6">
 				<p class="text-center text-xs font-semibold uppercase tracking-wider text-noir/60">

@@ -42,7 +42,7 @@
 				<!-- Let's Talk Button -->
 				<a
 					href="/contact"
-					class="group relative flex items-center gap-2 overflow-hidden rounded-full border border-noir bg-noir px-6 py-2.5 text-sm font-medium text-blanc transition-all duration-300 hover:border-jaune hover:bg-jaune hover:text-noir focus:outline-none focus:ring-2 focus:ring-jaune focus:ring-offset-2"
+					class="group relative hidden items-center gap-2 overflow-hidden rounded-full border border-noir bg-noir px-6 py-2.5 text-sm font-medium text-blanc transition-all duration-300 hover:border-jaune hover:bg-jaune hover:text-noir focus:outline-none focus:ring-2 focus:ring-jaune focus:ring-offset-2 md:flex"
 				>
 					<span
 						class="inline-block transition-transform duration-300 group-hover:translate-x-1"
