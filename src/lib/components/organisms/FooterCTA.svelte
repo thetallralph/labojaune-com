@@ -6,7 +6,7 @@
 	const contact = {
 		label: '[contact]',
 		email: 'hello@labojaune.com',
-		phone: '+229 01 67 23 24 43'
+		phone: '+229 67 23 24 43'
 	};
 
 	const legal = [

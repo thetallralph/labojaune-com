@@ -31,7 +31,7 @@
 		contact: {
 			info: {
 				email: 'hello@labojaune.com',
-				phone: '+229 01 67 23 24 43',
+				phone: '+229 67 23 24 43',
 				address: 'Cotonou, Bénin',
 				hours: 'Lun - Ven : 9h - 18h',
 				social: {
