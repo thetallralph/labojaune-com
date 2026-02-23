@@ -112,7 +112,7 @@
 				<!-- Phone Contact -->
 				<div in:fly={{ y: 20, duration: 600, delay: 300 }}>
 					<a
-						href="tel:+22967232443"
+						href="tel:+2290167232443"
 						class="group block rounded-3xl border-4 border-noir bg-blanc p-12 transition-all duration-300 hover:bg-noir hover:text-blanc"
 					>
 						<div class="mb-6">
@@ -133,7 +133,7 @@
 						<div class="mb-3 text-sm font-medium uppercase tracking-wider opacity-60">
 							Appelez-nous
 						</div>
-						<div class="font-display text-3xl font-bold md:text-4xl">+229 67 23 24 43</div>
+						<div class="font-display text-3xl font-bold md:text-4xl">+229 01 67 23 24 43</div>
 					</a>
 				</div>
 			</div>
