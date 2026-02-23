@@ -142,7 +142,7 @@
 			<div class="mb-24 grid gap-6 md:grid-cols-2">
 				<div in:fly={{ y: 20, duration: 600, delay: 400 }}>
 					<a
-						href="https://calendly.com/labojaune"
+						href="https://calendar.app.google/2pPtQkn2ft55cfh29"
 						target="_blank"
 						rel="noopener noreferrer"
 						class="flex items-center justify-center gap-3 rounded-full bg-noir px-8 py-4 text-lg font-semibold text-blanc transition-all duration-300 hover:bg-noir/90"
