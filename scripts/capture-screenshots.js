@@ -18,7 +18,7 @@ const projects = [
 	},
 	{
 		id: 'le-belier',
-		url: 'https://agencelebelier.com',
+		url: 'https://complexelebelier.com',
 		filename: 'le-belier.jpg'
 	},
 	{
