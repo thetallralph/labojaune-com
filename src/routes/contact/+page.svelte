@@ -1,5 +1,16 @@
 <script>
+	import { enhance } from '$app/forms';
+	import { CONTACT_EMAIL, CONTACT_MAILTO, TYPES_PROJET } from '$lib/data/contact.js';
 	import { fly } from '$lib/utils/transitions';
+
+	let { form } = $props();
+	let envoi = $state(false);
+
+	/** @type {Record<string, string>} */
+	let erreurs = $derived(form?.erreurs ?? {});
+
+	const champ =
+		'w-full rounded-2xl border-2 border-noir/15 bg-blanc px-5 py-4 text-lg text-noir transition-colors placeholder:text-noir/40 focus:border-noir focus:outline-none';
 
 	const nextSteps = [
 		{
@@ -10,7 +21,7 @@
 		{
 			number: '02',
 			title: 'Découverte',
-			description: "Nous analysons vos besoins et définissons ensemble la meilleure approche"
+			description: 'Nous analysons vos besoins et définissons ensemble la meilleure approche'
 		},
 		{
 			number: '03',
@@ -65,9 +76,7 @@
 	<div class="container mx-auto px-6">
 		<div class="mx-auto max-w-4xl text-center">
 			<div in:fly={{ y: 20, duration: 600, delay: 100 }}>
-				<h1 class="mb-6 font-display text-5xl font-bold md:text-6xl">
-					Parlons de votre projet
-				</h1>
+				<h1 class="mb-6 font-display text-5xl font-bold md:text-6xl">Parlons de votre projet</h1>
 			</div>
 		</div>
 	</div>
@@ -82,7 +91,7 @@
 				<!-- Email Contact -->
 				<div in:fly={{ y: 20, duration: 600, delay: 200 }}>
 					<a
-						href="mailto:hello@labojaune.com"
+						href={CONTACT_MAILTO}
 						class="group block rounded-3xl border-4 border-noir bg-blanc p-12 transition-all duration-300 hover:bg-noir hover:text-blanc"
 					>
 						<div class="mb-6">
@@ -104,7 +113,7 @@
 							Envoyez un message
 						</div>
 						<div class="break-words font-display text-3xl font-bold md:text-4xl">
-							hello@labojaune.com
+							{CONTACT_EMAIL}
 						</div>
 					</a>
 				</div>
@@ -161,9 +170,7 @@
 
 				<div in:fly={{ y: 20, duration: 600, delay: 500 }}>
 					<a
-						href="https://tally.so/r/labojaune"
-						target="_blank"
-						rel="noopener noreferrer"
+						href="#formulaire"
 						class="flex items-center justify-center gap-3 rounded-full border-2 border-noir bg-blanc px-8 py-4 text-lg font-semibold text-noir transition-all duration-300 hover:bg-noir hover:text-blanc"
 					>
 						<svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -179,6 +186,148 @@
 				</div>
 			</div>
 
+			<!-- Formulaire de contact -->
+			<div id="formulaire" class="mb-24 scroll-mt-28" in:fly={{ y: 20, duration: 600, delay: 550 }}>
+				<h2 class="mb-4 font-display text-3xl font-bold md:text-4xl">
+					Parlez-nous de votre projet
+				</h2>
+				<p class="mb-10 text-lg text-noir/60">
+					Quelques lignes suffisent. Nous vous répondons sous 48h.
+				</p>
+
+				{#if form?.succes}
+					<div class="rounded-3xl border-4 border-noir bg-jaune p-10" role="status">
+						<div class="mb-2 font-display text-3xl font-bold">Message envoyé, merci !</div>
+						<p class="text-lg">
+							Nous revenons vers vous très vite, à l'adresse que vous avez indiquée.
+						</p>
+					</div>
+				{:else}
+					<form
+						method="POST"
+						novalidate
+						class="grid gap-6 md:grid-cols-2"
+						use:enhance={() => {
+							envoi = true;
+							return async ({ update }) => {
+								await update({ reset: false });
+								envoi = false;
+							};
+						}}
+					>
+						<!-- Champ piège pour les robots : invisible pour les visiteurs -->
+						<div class="hidden" aria-hidden="true">
+							<label>Site <input type="text" name="site" tabindex="-1" autocomplete="off" /></label>
+						</div>
+
+						<div>
+							<label for="nom" class="mb-2 block font-semibold">Nom *</label>
+							<input
+								id="nom"
+								name="nom"
+								type="text"
+								autocomplete="name"
+								required
+								value={form?.nom ?? ''}
+								aria-invalid={erreurs.nom ? 'true' : undefined}
+								aria-describedby={erreurs.nom ? 'nom-erreur' : undefined}
+								class={champ}
+							/>
+							{#if erreurs.nom}<p id="nom-erreur" class="mt-2 text-sm text-red-600">
+									{erreurs.nom}
+								</p>{/if}
+						</div>
+
+						<div>
+							<label for="email" class="mb-2 block font-semibold">E-mail *</label>
+							<input
+								id="email"
+								name="email"
+								type="email"
+								autocomplete="email"
+								required
+								value={form?.email ?? ''}
+								aria-invalid={erreurs.email ? 'true' : undefined}
+								aria-describedby={erreurs.email ? 'email-erreur' : undefined}
+								class={champ}
+							/>
+							{#if erreurs.email}<p id="email-erreur" class="mt-2 text-sm text-red-600">
+									{erreurs.email}
+								</p>{/if}
+						</div>
+
+						<div>
+							<label for="telephone" class="mb-2 block font-semibold">Téléphone / WhatsApp</label>
+							<input
+								id="telephone"
+								name="telephone"
+								type="tel"
+								autocomplete="tel"
+								value={form?.telephone ?? ''}
+								class={champ}
+							/>
+						</div>
+
+						<div>
+							<label for="entreprise" class="mb-2 block font-semibold">Entreprise</label>
+							<input
+								id="entreprise"
+								name="entreprise"
+								type="text"
+								autocomplete="organization"
+								value={form?.entreprise ?? ''}
+								class={champ}
+							/>
+						</div>
+
+						<div class="md:col-span-2">
+							<label for="projet" class="mb-2 block font-semibold">Type de projet</label>
+							<select id="projet" name="projet" value={form?.projet ?? ''} class={champ}>
+								<option value="">Choisir…</option>
+								{#each TYPES_PROJET as type (type)}
+									<option value={type}>{type}</option>
+								{/each}
+							</select>
+						</div>
+
+						<div class="md:col-span-2">
+							<label for="message" class="mb-2 block font-semibold">Votre projet *</label>
+							<textarea
+								id="message"
+								name="message"
+								rows="6"
+								required
+								placeholder="Vos objectifs, vos délais, votre budget si vous l'avez en tête…"
+								aria-invalid={erreurs.message ? 'true' : undefined}
+								aria-describedby={erreurs.message ? 'message-erreur' : undefined}
+								class={champ}>{form?.message ?? ''}</textarea
+							>
+							{#if erreurs.message}<p id="message-erreur" class="mt-2 text-sm text-red-600">
+									{erreurs.message}
+								</p>{/if}
+						</div>
+
+						{#if form?.echec}
+							<p class="text-red-600 md:col-span-2" role="alert">
+								L'envoi n'a pas abouti. Réessayez dans un instant, ou écrivez-nous directement à
+								<a href={CONTACT_MAILTO} class="font-semibold underline">{CONTACT_EMAIL}</a>.
+							</p>
+						{/if}
+
+						<div class="md:col-span-2">
+							<button
+								type="submit"
+								disabled={envoi}
+								class="inline-flex items-center gap-3 rounded-full bg-noir px-10 py-4 text-lg font-semibold text-blanc transition-all duration-300 hover:bg-jaune hover:text-noir disabled:cursor-wait disabled:opacity-60"
+							>
+								{envoi ? 'Envoi en cours…' : 'Envoyer le message'}
+								{#if !envoi}<span aria-hidden="true">→</span>{/if}
+							</button>
+						</div>
+					</form>
+				{/if}
+			</div>
+
 			<!-- Next Steps Section -->
 			<div in:fly={{ y: 20, duration: 600, delay: 600 }}>
 				<h2 class="mb-12 text-center font-display text-3xl font-bold md:text-4xl">
@@ -186,7 +335,7 @@
 				</h2>
 
 				<div class="grid gap-6 md:grid-cols-2">
-					{#each nextSteps as step, i}
+					{#each nextSteps as step, i (step.number)}
 						<div
 							in:fly={{ y: 20, duration: 600, delay: 700 + i * 100 }}
 							class="group rounded-2xl border-2 border-noir/10 p-8 transition-all duration-300 hover:border-noir"
@@ -204,9 +353,7 @@
 			<!-- Location & Social -->
 			<div class="mt-24 text-center">
 				<div in:fly={{ y: 20, duration: 600, delay: 1100 }} class="mb-8">
-					<div class="mb-2 text-sm font-medium uppercase tracking-wider text-noir/60">
-						Basés à
-					</div>
+					<div class="mb-2 text-sm font-medium uppercase tracking-wider text-noir/60">Basés à</div>
 					<div class="font-display text-3xl font-bold">Cotonou, Bénin</div>
 				</div>
 

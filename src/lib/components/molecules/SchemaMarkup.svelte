@@ -1,4 +1,5 @@
 <script>
+	import { CONTACT_EMAIL } from '$lib/data/contact.js';
 	export let type = 'Organization';
 	export let data = {};
 
@@ -20,7 +21,7 @@
 		contactPoint: {
 			'@type': 'ContactPoint',
 			contactType: 'customer service',
-			email: 'contact@labojaune.com',
+			email: CONTACT_EMAIL,
 			availableLanguage: ['French', 'English']
 		},
 		sameAs: [

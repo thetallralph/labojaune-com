@@ -10,10 +10,19 @@
 
 	const navItems = [
 		{ label: 'À propos', href: '/about' },
-		{ label: 'Projets', href: '/projects' }
+		{ label: 'Projets', href: '/projects' },
+		{ label: 'Journal', href: '/blog' }
 	];
 
 	let currentPath = $derived($page.url.pathname);
+
+	/**
+	 * Un lien reste actif sur ses sous-pages (ex. /blog/mon-article).
+	 * @param {string} href
+	 */
+	function isActive(href) {
+		return currentPath === href || currentPath.startsWith(`${href}/`);
+	}
 
 	// Handle escape key for mobile menu
 	/**
@@ -44,9 +53,7 @@
 					href="/contact"
 					class="group relative hidden items-center gap-2 overflow-hidden rounded-full border border-noir bg-noir px-6 py-2.5 text-sm font-medium text-blanc transition-all duration-300 hover:border-jaune hover:bg-jaune hover:text-noir focus:outline-none focus:ring-2 focus:ring-jaune focus:ring-offset-2 md:flex"
 				>
-					<span
-						class="inline-block transition-transform duration-300 group-hover:translate-x-1"
-					>
+					<span class="inline-block transition-transform duration-300 group-hover:translate-x-1">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="16"
@@ -108,7 +115,7 @@
 						<!-- Popover Menu -->
 						<div
 							id="header-menu"
-							class="absolute right-0 top-full mt-2 z-50 w-64 overflow-hidden rounded-2xl border border-noir bg-blanc shadow-xl"
+							class="absolute right-0 top-full z-50 mt-2 w-64 overflow-hidden rounded-2xl border border-noir bg-blanc shadow-xl"
 							transition:fly={{ y: -10, duration: 200 }}
 							role="dialog"
 							aria-modal="true"
@@ -124,14 +131,14 @@
 												on:click={closeMenu}
 												class={cn(
 													'group relative flex items-center justify-between rounded-lg px-4 py-3 text-base font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-jaune focus:ring-offset-2',
-													currentPath === item.href
+													isActive(item.href)
 														? 'bg-jaune text-noir'
 														: 'text-noir hover:bg-gris-clair'
 												)}
-												aria-current={currentPath === item.href ? 'page' : undefined}
+												aria-current={isActive(item.href) ? 'page' : undefined}
 											>
 												<span>{item.label}</span>
-												{#if currentPath === item.href}
+												{#if isActive(item.href)}
 													<svg
 														xmlns="http://www.w3.org/2000/svg"
 														width="16"

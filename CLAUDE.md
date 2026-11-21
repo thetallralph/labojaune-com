@@ -33,6 +33,7 @@ npm run test:unit    # Run tests in watch mode
 - **DEVELOPMENT_STRATEGY.md** - Comprehensive development strategy and timeline
 - **BRAND_GUIDELINES.md** - Complete brand guidelines and design system documentation
 - **design-system.json** - Structured design tokens for programmatic use
+- **BLOG.md** - How the blog works: frontmatter, drafts, publishing workflow
 - **content.json** - All website content in French
 
 ## Design System

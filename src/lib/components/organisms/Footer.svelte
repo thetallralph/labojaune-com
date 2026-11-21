@@ -1,4 +1,5 @@
 <script>
+	import { CONTACT_EMAIL } from '$lib/data/contact.js';
 	import Container from '$lib/components/atoms/Container.svelte';
 	import Logo from '$lib/components/atoms/Logo.svelte';
 
@@ -24,13 +25,14 @@
 			tagline: 'Du code propre, du design qui claque, et une équipe qui kiffe son job.',
 			links: [
 				{ label: 'À propos du Labo', href: '/about' },
-				{ label: 'Projets', href: '/projects' }
+				{ label: 'Projets', href: '/projects' },
+				{ label: 'Journal', href: '/blog' }
 			],
 			copyright: '© Le Labo Jaune. Tous droits réservés.'
 		},
 		contact: {
 			info: {
-				email: 'hello@labojaune.com',
+				email: CONTACT_EMAIL,
 				phone: '+229 01 67 23 24 43',
 				address: 'Cotonou, Bénin',
 				hours: 'Lun - Ven : 9h - 18h',
@@ -45,7 +47,7 @@
 </script>
 
 <footer
-	class="bg-[#eee] text-noir relative overflow-hidden"
+	class="relative overflow-hidden bg-[#eee] text-noir"
 	role="contentinfo"
 	aria-label="Pied de page"
 >
@@ -55,7 +57,9 @@
 			<div class="mb-16 lg:mb-20">
 				<Logo className="mb-8" variant="dark" size="large" />
 				<div class="max-w-2xl">
-					<h2 class="mb-6 font-display text-4xl font-bold leading-tight text-noir md:text-5xl lg:text-6xl">
+					<h2
+						class="mb-6 font-display text-4xl font-bold leading-tight text-noir md:text-5xl lg:text-6xl"
+					>
 						{content.footer.headline}
 					</h2>
 					<p class="mb-8 text-xl text-noir/70 md:text-2xl">
@@ -63,7 +67,7 @@
 					</p>
 					<a
 						href="/contact"
-						class="inline-flex items-center gap-2 rounded-full bg-jaune px-10 py-4 text-lg font-semibold text-noir transition-all hover:bg-jaune/90 hover:scale-105"
+						class="inline-flex items-center gap-2 rounded-full bg-jaune px-10 py-4 text-lg font-semibold text-noir transition-all hover:scale-105 hover:bg-jaune/90"
 					>
 						Commencer maintenant
 						<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -151,7 +155,7 @@
 									href={url}
 									target="_blank"
 									rel="noopener noreferrer"
-									class="group flex h-12 w-12 items-center justify-center rounded-full border-2 border-noir/30 text-noir transition-all duration-300 hover:border-noir hover:bg-noir hover:text-blanc hover:scale-110"
+									class="group flex h-12 w-12 items-center justify-center rounded-full border-2 border-noir/30 text-noir transition-all duration-300 hover:scale-110 hover:border-noir hover:bg-noir hover:text-blanc"
 									aria-label="Suivez-nous sur {platform}"
 								>
 									<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">

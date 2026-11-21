@@ -4,14 +4,27 @@
 
 	const projects = [
 		{
-			id: 'aidjedo',
-			title: 'Plateforme complète avec système de dons en ligne et espace membre',
-			category: 'Site Web',
-			image: '/images/projects/aidjedo.jpg'
+			id: 'flotpilot',
+			title: 'Logiciel de gestion de flotte et de chauffeurs pour les parcs de véhicules',
+			category: 'Logiciel SaaS',
+			image: '/images/projects/flotpilot.jpg'
+		},
+		{
+			id: 'back-to-bac-2006',
+			title: 'Site événementiel et billetterie en ligne pour les 20 ans du bac 2006',
+			category: 'Billetterie & Événement',
+			image: '/images/projects/back-to-bac-2006.jpg'
+		},
+		{
+			id: 'ar-cco',
+			title: "Site institutionnel de l'amicale des retraités du Complexe Cimentier d'Onigbolo",
+			category: 'Site Associatif',
+			image: '/images/projects/ar-cco.jpg'
 		},
 		{
 			id: 'fdfa',
-			title: 'Plateforme institutionnelle positionnant la FDFA comme acteur majeur du football africain',
+			title:
+				'Plateforme institutionnelle positionnant la FDFA comme acteur majeur du football africain',
 			category: 'Site Institutionnel',
 			image: '/images/projects/fdfa.jpg'
 		},
@@ -75,10 +88,7 @@
 	<meta property="twitter:card" content="summary_large_image" />
 	<meta property="twitter:url" content="https://labojaune.com/projects" />
 	<meta property="twitter:title" content="Projets - Labo Jaune" />
-	<meta
-		property="twitter:description"
-		content="Projets digitaux innovants et sur-mesure."
-	/>
+	<meta property="twitter:description" content="Projets digitaux innovants et sur-mesure." />
 	<meta property="twitter:image" content="https://labojaune.com/og-image.jpg" />
 
 	<!-- Canonical URL -->
@@ -154,4 +164,3 @@
 		</div>
 	</section>
 </div>
-

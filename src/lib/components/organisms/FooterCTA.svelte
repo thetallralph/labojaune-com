@@ -1,11 +1,12 @@
 <script>
+	import { CONTACT_EMAIL, CONTACT_MAILTO } from '$lib/data/contact.js';
 	import Logo from '$lib/components/atoms/Logo.svelte';
 
 	const year = new Date().getFullYear();
 
 	const contact = {
 		label: '[contact]',
-		email: 'hello@labojaune.com',
+		email: CONTACT_EMAIL,
 		phone: '+229 01 67 23 24 43'
 	};
 
@@ -15,17 +16,19 @@
 	];
 </script>
 
-<footer class="relative z-20 bg-gris-clair py-16 lg:py-24 shadow-xl">
+<footer class="relative z-20 bg-gris-clair py-16 shadow-xl lg:py-24">
 	<div class="container mx-auto px-6">
 		<div class="grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-y-10">
 			<!-- Contact Section -->
 			<div class="md:col-span-4 md:col-start-1">
-				<span class="mb-5 block text-xs font-semibold uppercase tracking-wider text-noir/60 lg:mb-6">
+				<span
+					class="mb-5 block text-xs font-semibold uppercase tracking-wider text-noir/60 lg:mb-6"
+				>
 					{contact.label}
 				</span>
 				<div class="flex flex-col gap-2.5 lg:gap-0">
 					<a
-						href="mailto:{contact.email}"
+						href={CONTACT_MAILTO}
 						class="group inline-block text-3xl font-bold text-noir transition-colors hover:text-jaune md:text-4xl lg:text-5xl"
 					>
 						<div class="transition-transform group-hover:translate-x-1">
@@ -45,7 +48,7 @@
 
 			<!-- Legal Links -->
 			<div
-				class="flex flex-col items-start gap-1 text-sm text-noir/60 md:col-span-3 md:col-start-9 md:self-end md:items-end lg:col-span-2 lg:col-start-11"
+				class="flex flex-col items-start gap-1 text-sm text-noir/60 md:col-span-3 md:col-start-9 md:items-end md:self-end lg:col-span-2 lg:col-start-11"
 			>
 				{#each legal as link}
 					<a href={link.href} class="transition-colors hover:text-noir">

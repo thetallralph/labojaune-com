@@ -2,13 +2,19 @@
 	import { fly } from '$lib/utils/transitions';
 	import { projectsData } from '$lib/data/projects';
 	import TestimonialsCarousel from '$lib/components/organisms/TestimonialsCarousel.svelte';
+	import BlogCard from '$lib/components/molecules/BlogCard.svelte';
+
+	let { data } = $props();
+
+	// `?? []` : la page reste rendable sans données (tests de composant).
+	let latestPosts = $derived(data?.latestPosts ?? []);
 
 	// Get all projects as an array
 	const allProjects = Object.values(projectsData);
 
 	// Client logos
 	const clients = [
-		{ name: 'AIDJEDO', logo: '/logos/logo-aidjedo.png' },
+		{ name: 'Flot Pilot', logo: '/logos/logo-flotpilot.svg' },
 		{ name: 'FDFA', logo: '/logos/logo-fdfa.png' },
 		{ name: 'Le Bélier', logo: '/logos/logo-lebelier.png' },
 		{ name: 'Koin Koin', logo: '/logos/logo-koinkoin.png' },
@@ -24,11 +30,12 @@
 			author: 'Mamadou Diallo',
 			role: 'Directeur Général',
 			company: 'CORIS Bank',
-			authorImage: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&q=80'
+			authorImage:
+				'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&q=80'
 		},
 		{
 			quote:
-				"Travailler avec Le Labo Jaune a été une révélation. Ils ont su comprendre nos besoins et nous proposer une solution sur-mesure qui a considérablement amélioré notre efficacité opérationnelle.",
+				'Travailler avec Le Labo Jaune a été une révélation. Ils ont su comprendre nos besoins et nous proposer une solution sur-mesure qui a considérablement amélioré notre efficacité opérationnelle.',
 			author: 'Aminata Touré',
 			role: 'Directrice Marketing',
 			company: 'FDFA',
@@ -37,7 +44,7 @@
 		},
 		{
 			quote:
-				"Une équipe exceptionnelle qui allie créativité et rigueur technique. Le projet a été livré dans les délais avec une qualité irréprochable. Je recommande vivement leurs services.",
+				'Une équipe exceptionnelle qui allie créativité et rigueur technique. Le projet a été livré dans les délais avec une qualité irréprochable. Je recommande vivement leurs services.',
 			author: 'Jean-Claude Mensah',
 			role: 'CEO',
 			company: 'Toguna World',
@@ -77,13 +84,24 @@
 					title: 'Design & UX',
 					value:
 						'Nous créons des interfaces intuitives qui reflètent votre identité et engagent vos utilisateurs',
-					deliverables: ['Identité visuelle', 'Maquettes UI/UX', 'Prototype interactif', 'Design system']
+					deliverables: [
+						'Identité visuelle',
+						'Maquettes UI/UX',
+						'Prototype interactif',
+						'Design system'
+					]
 				},
 				{
 					id: 'development',
 					title: 'Développement',
-					value: 'Nous construisons des solutions techniques robustes, évolutives et faciles à maintenir',
-					deliverables: ['Sites web', 'Applications mobiles', 'Plateformes sur-mesure', 'Intégrations API']
+					value:
+						'Nous construisons des solutions techniques robustes, évolutives et faciles à maintenir',
+					deliverables: [
+						'Sites web',
+						'Applications mobiles',
+						'Plateformes sur-mesure',
+						'Intégrations API'
+					]
 				}
 			]
 		},
@@ -226,7 +244,7 @@
 				></div>
 
 				<!-- Scrolling logos -->
-				<div class="flex animate-scroll gap-32">
+				<div class="animate-scroll flex gap-32">
 					{#each [...clients, ...clients] as client}
 						<div class="flex-shrink-0">
 							<div class="flex h-8 w-20 items-center justify-center">
@@ -253,9 +271,12 @@
 	<div class="container relative z-10 mx-auto px-6">
 		<div class="mx-auto max-w-5xl">
 			<div in:fly={{ y: 30, duration: 800, delay: 100 }}>
-				<h2 class="mb-10 font-display text-3xl font-bold leading-tight text-noir md:text-4xl lg:text-5xl">
+				<h2
+					class="mb-10 font-display text-3xl font-bold leading-tight text-noir md:text-4xl lg:text-5xl"
+				>
 					Le digital n'est pas une fin en soi. C'est un moyen d'amplifier ce qui vous rend unique.
-					Nous créons des solutions qui révèlent l'essence de votre projet et donnent à vos idées la portée qu'elles méritent.
+					Nous créons des solutions qui révèlent l'essence de votre projet et donnent à vos idées la
+					portée qu'elles méritent.
 				</h2>
 			</div>
 			<div in:fly={{ y: 20, duration: 600, delay: 300 }}>
@@ -290,25 +311,27 @@
 			<div class="space-y-8 lg:space-y-12">
 				{#each allProjects.slice(0, 4) as project, i}
 					{@const layouts = [
-						/* 0 - AIDJEDO - Full width landscape */
+						/* 0 - Flot Pilot - Full width landscape */
 						{ width: 'w-full', aspectRatio: 'aspect-[16/9] lg:aspect-[5/2]', align: '' },
-						/* 1 - FDFA - Right aligned, 60% width, portrait */
-						{ width: 'w-full lg:w-3/5 lg:ml-auto', aspectRatio: 'aspect-[4/3] lg:aspect-[4/3]', align: '' },
-						/* 2 - Le Bélier - Left aligned, 55% width, square-ish */
+						/* 1 - Back to Bac 2006 - Right aligned, 60% width */
+						{
+							width: 'w-full lg:w-3/5 lg:ml-auto',
+							aspectRatio: 'aspect-[4/3] lg:aspect-[4/3]',
+							align: ''
+						},
+						/* 2 - AR-CCO - Left aligned, 55% width, square-ish */
 						{ width: 'w-full lg:w-[55%]', aspectRatio: 'aspect-[4/3] lg:aspect-[3/2]', align: '' },
-						/* 3 - Toguna World - Right aligned, 50% width, portrait */
-						{ width: 'w-full lg:w-1/2 lg:ml-auto', aspectRatio: 'aspect-[4/3] lg:aspect-[4/3]', align: '' }
+						/* 3 - FDFA - Right aligned, 50% width */
+						{
+							width: 'w-full lg:w-1/2 lg:ml-auto',
+							aspectRatio: 'aspect-[4/3] lg:aspect-[4/3]',
+							align: ''
+						}
 					]}
 					{@const layout = layouts[i]}
 
-					<div
-						class="{layout.width}"
-						in:fly={{ y: 30, duration: 600, delay: 100 + i * 75 }}
-					>
-						<a
-							href="/projects/{project.id}"
-							class="group relative block no-underline"
-						>
+					<div class={layout.width} in:fly={{ y: 30, duration: 600, delay: 100 + i * 75 }}>
+						<a href="/projects/{project.id}" class="group relative block no-underline">
 							<!-- Image container with real project images -->
 							<div
 								class="relative mb-6 {layout.aspectRatio} overflow-hidden rounded-3xl bg-gris-clair"
@@ -320,7 +343,9 @@
 									loading="lazy"
 								/>
 								<!-- Category badge -->
-								<div class="absolute top-6 right-6 rounded-full bg-blanc/10 backdrop-blur-sm px-5 py-2.5 text-xs font-semibold text-blanc/90">
+								<div
+									class="absolute right-6 top-6 rounded-full bg-blanc/10 px-5 py-2.5 text-xs font-semibold text-blanc/90 backdrop-blur-sm"
+								>
 									{project.category}
 								</div>
 							</div>
@@ -328,14 +353,12 @@
 							<!-- Project info -->
 							<div class="space-y-3 px-2">
 								<div class="flex items-start justify-between gap-4">
-									<h3
-										class="font-display text-2xl font-bold text-blanc lg:text-4xl"
-									>
+									<h3 class="font-display text-2xl font-bold text-blanc lg:text-4xl">
 										{project.title}
 									</h3>
-									<span class="text-sm text-blanc/60 whitespace-nowrap mt-1.5">{project.year}</span>
+									<span class="mt-1.5 whitespace-nowrap text-sm text-blanc/60">{project.year}</span>
 								</div>
-								<p class="text-base text-blanc/70 lg:text-lg max-w-xl">
+								<p class="max-w-xl text-base text-blanc/70 lg:text-lg">
 									{project.client}
 								</p>
 							</div>
@@ -350,7 +373,7 @@
 		<div class="mt-16 text-center">
 			<a
 				href="/projects"
-				class="rounded-full border-2 border-blanc bg-transparent px-8 py-4 text-lg font-semibold text-blanc transition-all hover:bg-jaune hover:border-jaune hover:text-noir"
+				class="rounded-full border-2 border-blanc bg-transparent px-8 py-4 text-lg font-semibold text-blanc transition-all hover:border-jaune hover:bg-jaune hover:text-noir"
 			>
 				{content.portfolio.cta}
 			</a>
@@ -405,9 +428,11 @@
 
 						<!-- Deliverables (visible on hover) -->
 						<div class="max-h-0 overflow-hidden transition-all duration-500 group-hover:max-h-20">
-							<div class="flex gap-3 overflow-x-auto pb-2 pt-4 scrollbar-hide">
+							<div class="scrollbar-hide flex gap-3 overflow-x-auto pb-2 pt-4">
 								{#each service.deliverables as deliverable}
-									<span class="whitespace-nowrap rounded-full border border-noir bg-blanc px-4 py-2 text-sm">
+									<span
+										class="whitespace-nowrap rounded-full border border-noir bg-blanc px-4 py-2 text-sm"
+									>
 										{deliverable}
 									</span>
 								{/each}
@@ -419,6 +444,41 @@
 		</div>
 	</div>
 </section>
+
+<!-- Derniers articles -->
+{#if latestPosts.length > 0}
+	<section class="border-t border-noir/10 bg-blanc py-24 md:py-32">
+		<div class="container mx-auto px-6">
+			<div class="mx-auto max-w-7xl">
+				<!-- Header -->
+				<div class="mb-16 flex flex-wrap items-end justify-between gap-6">
+					<div in:fly={{ y: 20, duration: 600, delay: 100 }}>
+						<h2 class="mb-4 font-display text-4xl font-bold text-noir md:text-5xl">Le journal</h2>
+						<p class="max-w-xl text-xl text-noir/70">
+							Ce qu'on apprend en construisant des produits digitaux, partagé sans filtre.
+						</p>
+					</div>
+					<a
+						href="/blog"
+						class="inline-block font-medium text-noir underline decoration-2 underline-offset-4 transition-colors hover:text-jaune"
+						in:fly={{ y: 20, duration: 600, delay: 200 }}
+					>
+						Lire tous les articles →
+					</a>
+				</div>
+
+				<!-- Articles -->
+				<div class="grid gap-x-10 gap-y-14 md:grid-cols-3">
+					{#each latestPosts as post, i (post.slug)}
+						<div in:fly={{ y: 20, duration: 600, delay: 300 + i * 100 }}>
+							<BlogCard {post} />
+						</div>
+					{/each}
+				</div>
+			</div>
+		</div>
+	</section>
+{/if}
 
 <style>
 	/* Hide scrollbar for Chrome, Safari and Opera */

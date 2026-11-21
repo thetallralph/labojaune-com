@@ -1,39 +1,84 @@
 export const projectsData = {
-	aidjedo: {
-		id: 'aidjedo',
-		title: 'ONG AIDJEDO',
-		client: 'AÏDJÈDO – PAIX DU CŒUR',
-		category: 'Site Web',
-		year: 2024,
-		image: '/images/projects/aidjedo.jpg',
-		website: 'https://aidjedo.org',
+	flotpilot: {
+		id: 'flotpilot',
+		title: 'Flot Pilot',
+		client: 'Flot Pilot',
+		category: 'Logiciel SaaS',
+		year: 2026,
+		image: '/images/projects/flotpilot.jpg',
+		website: 'https://flotpilot.com',
 		featured: true,
-		heroColor: '#2C5282',
-		tagline: 'Transformer la solidarité en action digitale',
+		heroColor: '#E5533D',
+		tagline: 'Votre flotte en autopilote',
 		description:
-			'Plateforme complète avec système de dons en ligne et espace membre pour cette ONG béninoise',
+			"Logiciel de gestion de flotte et de chauffeurs pour les gestionnaires de parcs en Afrique de l'Ouest",
 		challenge:
-			"L'ONG avait besoin d'une présence digitale moderne pour faciliter les dons en ligne de manière sécurisée, gérer efficacement les adhésions des membres, communiquer sur leurs 6 programmes d'action et mettre en place un système de signalement pour les cas de détresse.",
+			"Les gestionnaires de parcs (voitures, motos, tricycles) suivent leurs véhicules, leurs chauffeurs, les papiers et les versements journaliers dans des cahiers, des tableurs et des groupes WhatsApp. Les échéances d'assurance ou de visite technique passent, les versements se perdent et personne ne connaît le coût réel de chaque véhicule.",
 		solution:
-			"Nous avons conçu et développé un site web complet qui traduit parfaitement la mission humanitaire d'AIDJEDO en une expérience digitale engageante et fonctionnelle.",
+			'Nous avons conçu et développé Flot Pilot, une plateforme multi-parcs qui réunit véhicules, chauffeurs, papiers et dépenses dans un seul outil. Une console pour le gérant, une application dédiée pour les chauffeurs, et des rappels automatiques avant chaque échéance.',
 		features: [
-			'Système de dons sécurisé avec intégration de paiement en ligne',
-			'Espace membre dédié avec portail personnalisé',
-			'Système innovant "Allo Aidjedo" pour signalement',
-			'Architecture claire mettant en avant les 6 programmes',
-			'Design émotionnel avec visuels impactants'
-		],
-		results: {
-			traffic: '+150% de trafic en 6 mois',
-			donations: '+40% de dons en ligne',
-			members: '+50 nouveaux membres',
-			mobile: '85% de trafic mobile'
-		},
-		testimonial: {
-			quote:
-				"Labo Jaune a su comprendre notre mission et la traduire en une plateforme digitale qui facilite réellement notre travail humanitaire. Les résultats parlent d'eux-mêmes.",
-			author: "Direction d'AÏDJÈDO"
-		}
+			'Console de gestion : véhicules, chauffeurs, affectations et états des lieux',
+			"Rappels automatiques avant chaque échéance de pièces et d'entretien",
+			'Suivi des versements, avances, pénalités et location-vente',
+			'Coût au kilomètre et résultat par véhicule',
+			'Application chauffeur séparée, avec déclaration des versements',
+			'Paiement Mobile Money et recrutement des chauffeurs intégrés',
+			'Isolation stricte des données de chaque parc',
+			'Site public bilingue français / anglais'
+		]
+	},
+	'back-to-bac-2006': {
+		id: 'back-to-bac-2006',
+		title: 'Back to Bac 2006',
+		client: 'Marcel Aissy',
+		category: 'Billetterie & Événement',
+		year: 2026,
+		image: '/images/projects/back-to-bac-2006.jpg',
+		website: 'https://backtobac2006.com',
+		featured: true,
+		heroColor: '#EA7A23',
+		tagline: '20 ans après, on va gâter le coin',
+		description:
+			'Site événementiel et billetterie en ligne pour la soirée des 20 ans du bac 2006 à Abidjan',
+		challenge:
+			"Réunir les bacheliers de 2006, tous lycées confondus, pour une grande soirée à Abidjan : leur donner envie de venir, vendre les billets en ligne avec les moyens de paiement locaux, collecter des dons pour la réhabilitation d'une bibliothèque scolaire et gérer l'accueil le jour J.",
+		solution:
+			"Nous avons créé un site qui parle la langue de la promo, avec une identité visuelle rétro et festive, et derrière, une billetterie complète : paiement, billets à QR code, cagnotte solidaire, espace d'administration et contrôle à l'entrée.",
+		features: [
+			'Billetterie en ligne : Mobile Money et carte bancaire',
+			"Billets personnels avec QR code, contrôlés à l'entrée",
+			"Cagnotte pour la réhabilitation d'une bibliothèque scolaire",
+			'Classement des lycées et mur des participants',
+			'Images de partage générées pour les réseaux sociaux',
+			'Administration avec alertes et résumé quotidien des ventes',
+			'Application installable avec notifications'
+		]
+	},
+	'ar-cco': {
+		id: 'ar-cco',
+		title: 'AR-CCO',
+		client: "Amicale des Retraités du Complexe Cimentier d'Onigbolo",
+		category: 'Site Associatif',
+		year: 2026,
+		image: '/images/projects/ar-cco.jpg',
+		website: 'https://arcco-bj.vercel.app',
+		featured: true,
+		heroColor: '#1F4D2B',
+		tagline: 'Une carrière ensemble, une retraite solidaire',
+		description: "Site institutionnel de l'amicale des retraités du Complexe Cimentier d'Onigbolo",
+		challenge:
+			"L'AR-CCO rassemble les anciens agents du Complexe Cimentier d'Onigbolo, avec un siège à Pobè et des sections de base dans tout le Bénin. L'amicale avait besoin d'un site pour présenter ses missions, informer ses membres des rendez-vous et simplifier l'adhésion, pour un public de retraités.",
+		solution:
+			'Nous avons conçu un site sobre et lisible, pensé pour des seniors : grands caractères, navigation simple, réglage de la taille du texte, et toutes les informations utiles à portée de clic.',
+		features: [
+			"Présentation de l'amicale et de son Bureau Exécutif National",
+			'Agenda des rencontres avec ajout au calendrier',
+			"Parcours d'adhésion détaillé : dossier, cotisations, sections de base",
+			'Espace ressources avec les documents officiels',
+			"Galerie des activités de l'amicale",
+			'Formulaire de contact',
+			"Réglage de la taille du texte pour l'accessibilité"
+		]
 	},
 	fdfa: {
 		id: 'fdfa',
@@ -90,7 +135,7 @@ export const projectsData = {
 					"Nous avons commencé par comprendre en profondeur l'univers de l'Agence Le Bélier. Quels sont leurs circuits phares ? Qu'est-ce qui rend leur hôtel unique ? Pourquoi les voyageurs reviennent-ils année après année ? Cette phase d'écoute nous a permis d'identifier les éléments clés à mettre en valeur."
 			},
 			{
-				title: 'Architecture de l\'Information',
+				title: "Architecture de l'Information",
 				description:
 					"Nous avons conçu une structure claire qui guide naturellement le visiteur : des circuits touristiques captivants aux chambres confortables de l'hôtel, en passant par les saveurs du restaurant Sympa la Vie. Chaque section raconte une partie de l'histoire."
 			},
@@ -109,7 +154,7 @@ export const projectsData = {
 			"Le résultat est une plateforme digitale qui capture l'essence de l'expérience Le Bélier. Dès la page d'accueil, le visiteur est accueilli par les paysages majestueux du nord Bénin. La navigation intuitive permet d'explorer les 4 circuits signature, de découvrir les chambres de l'hôtel niché au pied des montagnes, et de s'imaginer déguster la cuisine africaine et européenne du restaurant.",
 		features: [
 			'4 circuits touristiques détaillés avec itinéraires jour par jour',
-			'Présentation immersive de l\'hôtel avec galerie photos',
+			"Présentation immersive de l'hôtel avec galerie photos",
 			'Menu du restaurant Sympa la Vie avec spécialités locales',
 			'Système de réservation en ligne intégré (Tally)',
 			'Widget WhatsApp pour assistance en temps réel',
@@ -120,7 +165,7 @@ export const projectsData = {
 		gallery: [
 			{
 				image: '/images/projects/le-belier/hero.jpg',
-				caption: 'Page d\'accueil avec mise en avant des circuits'
+				caption: "Page d'accueil avec mise en avant des circuits"
 			},
 			{
 				image: '/images/projects/le-belier/tourisme.jpg',
@@ -128,7 +173,7 @@ export const projectsData = {
 			},
 			{
 				image: '/images/projects/le-belier/hotel.jpg',
-				caption: 'Présentation de l\'hôtel au pied des montagnes'
+				caption: "Présentation de l'hôtel au pied des montagnes"
 			},
 			{
 				image: '/images/projects/le-belier/restaurant.jpg',
@@ -139,7 +184,7 @@ export const projectsData = {
 			bookings: '+110% de réservations en ligne',
 			rating: '4.8/5 sur TripAdvisor',
 			countries: '24 nationalités de clients',
-			engagement: '+150% d\'engagement WhatsApp'
+			engagement: "+150% d'engagement WhatsApp"
 		},
 		testimonial: {
 			quote:

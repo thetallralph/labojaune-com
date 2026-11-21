@@ -174,7 +174,12 @@ Building a modern, minimalist agency website for Labo Jaune, inspired by BASIC/D
 
 - [ ] Dark mode toggle
 - [ ] Language switcher (FR/EN)
-- [ ] Blog/News section
+- [x] Blog/News section — voir `BLOG.md`
+  - [x] Index `/blog` + page article `/blog/[slug]` (Markdown via mdsvex)
+  - [x] Flux RSS `/blog/rss.xml`
+  - [x] Sitemap dynamique `/sitemap.xml` (pages, projets, articles)
+  - [x] Section « Le journal » sur la page d'accueil + articles liés
+  - [ ] Images de couverture pour les articles (`static/images/blog/`)
 - [ ] Newsletter signup
 - [ ] Cookie consent banner
 - [ ] Analytics dashboard
@@ -219,6 +224,9 @@ Building a modern, minimalist agency website for Labo Jaune, inspired by BASIC/D
 - [x] Navigation items
 - [x] Footer content
 - [x] Hero section copy
+- [x] Portfolio 2026-11-21 : ajout de Flot Pilot, Back to Bac 2006 et AR-CCO ; retrait d'AIDJEDO et de l'AFMEF
+- [x] Emails du site centralisés dans `src/lib/data/contact.js` (ralph@labojaune.com + ralphorie@gmail.com)
+- [x] Formulaire de contact intégré (remplace Tally) : envoi par ZeptoMail (Resend en secours) aux deux adresses, variables `ZEPTOMAIL_API_KEY`, `RESEND_API_KEY` et `CONTACT_FROM`
 
 ### 📋 Content Needed
 
@@ -228,7 +236,7 @@ Building a modern, minimalist agency website for Labo Jaune, inspired by BASIC/D
 - [ ] Service detailed descriptions
 - [ ] About page full content
 - [ ] Legal pages (Privacy, Terms)
-- [ ] Blog posts (if implementing blog)
+- [ ] Relecture des 3 articles de démarrage du blog (rédigés, à valider avant publication)
 
 ---
 

@@ -7,11 +7,6 @@ const __dirname = path.dirname(__filename);
 
 const projects = [
 	{
-		id: 'aidjedo',
-		url: 'https://aidjedo.org',
-		filename: 'aidjedo.jpg'
-	},
-	{
 		id: 'fdfa',
 		url: 'https://fondationfdfa.org',
 		filename: 'fdfa.jpg'
@@ -30,8 +25,26 @@ const projects = [
 		id: 'iwaria',
 		url: 'https://iwaria.com',
 		filename: 'iwaria.jpg'
+	},
+	{
+		id: 'flotpilot',
+		url: 'https://flotpilot.com',
+		filename: 'flotpilot.jpg'
+	},
+	{
+		id: 'back-to-bac-2006',
+		url: 'https://backtobac2006.com',
+		filename: 'back-to-bac-2006.jpg'
+	},
+	{
+		id: 'ar-cco',
+		url: 'https://arcco-bj.vercel.app',
+		filename: 'ar-cco.jpg'
 	}
 ];
+
+// Optionnel : `node scripts/capture-screenshots.js flotpilot ar-cco` ne capture que ces projets.
+const only = process.argv.slice(2);
 
 const outputDir = path.join(__dirname, '..', 'static', 'images', 'projects');
 
@@ -43,7 +56,7 @@ async function captureScreenshots() {
 		deviceScaleFactor: 1
 	});
 
-	for (const project of projects) {
+	for (const project of projects.filter((p) => !only.length || only.includes(p.id))) {
 		console.log(`\nCapturing ${project.id}...`);
 		console.log(`  URL: ${project.url}`);
 
